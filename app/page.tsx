@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 export default function Terms() {
   return (
-      <div className="min-h-screen text-center text-black bg-white flex items-center justify-center">
-        <div className="bg-white border rounded-lg shadow-lg p-12 w-5/6 md:p-12 md:w-1/2">
+      <main className="min-h-screen text-center text-black bg-white flex items-center justify-center">
+        <section className="bg-white border rounded-lg shadow-lg p-12 w-5/6 md:p-12 md:w-1/2">
           <Image
             alt='sanofi'
-            src='/Sanofi-2022.svg.png'
+            src='/Sanofi-2022.png'
             width={200}
             height={300}
             className='mx-auto'
@@ -27,7 +27,7 @@ export default function Terms() {
             Aceitar
           </button>
           </Link>
-        </div>
-      </div>
+        </section>
+      </main>
   )
 }
