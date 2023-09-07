@@ -26,26 +26,23 @@ export default function Avaliacao() {
 
   return (
     <main className="text-black min-h-screen flex flex-col justify-center items-center bg-white">
-      <form onSubmit={handleSubmit} className="flex flex-col relative justify-evenly bg-white md:border rounded-lg md:shadow-lg p-1 w-full md:p-12 md:w-5/6 lg:w-3/6 items-center">
-        <legend className="text-center mb-2 text-3xl w-full p-5">
-          <h1 className="text-center md:text-4xl md:p-5 text-xl md:block">
-            Escore de avaliação de risco de Caprini
-          </h1>
-          <h1 className="hidden text-xl">
-            Fatores de risco
+      <form onSubmit={handleSubmit} className="flex flex-col relative justify-evenly bg-white md:border rounded-lg md:shadow-lg p-1 w-full md:p-12 md:w-5/6 lg:w-4/6 items-center">
+        <legend className="text-center text-3xl w-full ">
+          <h1 className="md:text-4xl md:p-5 text-base font-bold mb-2 md:mb-0 md:block">
+            Escore de avaliação de risco {'\n'} de Caprini
           </h1>
         </legend>
         <CapriniUl handleScore={handleScore} score={score} menuPage={menuPage} />
-        <section className="text-center lg:w-3/6 w-4/6">
-          <button type="button" className="rounded w-2/6 border p-3 me-2 bg-purple-600 hover:bg-purple-900 disabled:bg-purple-100" onClick={() => setMenuPage((o) => o - 1)} disabled={menuPage <= 0}>
-            <ArrowLongLeftIcon className="mx-auto" width={24} />
+        <section className="w-5/6 flex flex-row mx-auto justify-between mb-3">
+          <button type="button" className="rounded w-3/6 border p-2 md:p-3 me-2 bg-purple-500 hover:bg-purple-800 disabled:bg-purple-100" onClick={() => setMenuPage((o) => o - 1)} disabled={menuPage <= 0}>
+            <ArrowLongLeftIcon className="mx-auto text-white" width={24} />
           </button>
-          <button type="button" className="rounded w-2/6 p-3 border bg-purple-600 hover:bg-purple-900 disabled:bg-purple-100" onClick={() => setMenuPage((o) => o + 1)} disabled={menuPage >= 2}>
-            <ArrowLongRightIcon className="mx-auto" width={24} />
+          <button type="button" className="rounded w-3/6 p-2 md:p-3 border bg-purple-500 hover:bg-purple-800 disabled:bg-purple-100" onClick={() => setMenuPage((o) => o + 1)} disabled={menuPage >= 2}>
+            <ArrowLongRightIcon className="mx-auto text-white" width={24} />
           </button>
         </section>
-        {menuPage === 2 && <button className="w-20 absolute bottom-3 right-3 bg-purple-600" type="submit">Calcular</button>}
-        {finalScore > 0 && finalScore}
+        <button className="p-2 md:p-3 rounded bg-purple-500 text-white w-5/6 hover:bg-purple-800 font-bold" type="submit">Calcular</button>
+        {/*menuPage === 2 && <button className="ps-6 pe-6 p-3 rounded bg-purple-600 text-white font-bold" type="submit">Calcular</button>*/}
       </form>
     </main>
   );

@@ -1,5 +1,4 @@
 //1 ponto
-const a1 = { id: 1, ask: 'Idade entre 41 anos e 60 anos', value: 1 }
 const a2 = { id: 2, ask: 'Cirurgia de grande porte (menos de 1 mês)', value: 1 }
 const a3 = { id: 3, ask: 'Obesidade (IMC > 25)', value: 1 }
 const a4 = { id: 4, ask: 'Varizes de mebros inferiores', value: 1 }
@@ -13,13 +12,14 @@ const a11 = { id: 11, ask: 'Insulficiência cardíaca congestiva (menos de 1 mê
 const a12 = { id: 12, ask: 'Doença pulmonar obstrutiva crônica', value: 1 }
 const a13 = { id: 13, ask: 'Perda fetal/Aborto', value: 1 }
 const a14 = { id: 14, ask: 'Uso de anticoncepcional ou terapia de reposição hormonal', value: 1 }
+const a19 = { id: 19, ask: 'Idade entre 41 anos e 60 anos', value: 1 }
 
 //2 pontos
+const a1 = { id: 1, ask: 'Câncer', value: 2 }
 const a15 = { id: 15, ask: 'Idade entre 61 anos a 74 anos', value: 2 }
 const a16 = { id: 16, ask: 'Cirurgia de artroscopia', value: 2 }
 const a17 = { id: 17, ask: 'Cirurgia de grande porte (>45 minutos)', value: 2 }
 const a18 = { id: 18, ask: 'Cirurgia laparoscópica (>45 minutos)', value: 2 }
-const a19 = { id: 19, ask: 'Câncer', value: 2 }
 const a20 = { id: 20, ask: 'Paciente confinado ao leito (>72 horas)', value: 2 }
 const a21 = { id: 21, ask: 'Imobilização do membro (gesso/tala <1 mês)', value: 2 }
 const a22 = { id: 22, ask: 'Acesso central venoso', value: 2 }
