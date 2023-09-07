@@ -1,11 +1,12 @@
 "use client"
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Card from '@/components/Caprini/Card'
 import { ScoreObj } from '@/components/types';
 
 export default function Caprini() {
   const [score, setScore] = useState<ScoreObj[]>([]);
   const [menuPage, setMenuPage] = useState(0)
+  const [finalScore, setFinalScore] = useState(0)
 
   const handleScore = (rawScore: ScoreObj) => {
     if (score.find((s) => s.id === rawScore.id)) {
@@ -14,15 +15,20 @@ export default function Caprini() {
     setScore((old) => [...old, rawScore])
   }
 
+  const handleSubmit = (e: any) => {
+    e.preventDefault()
+    const scoreSum = score.reduce((acc, obj) => {
+      return acc + obj.value
+    }, 0)
+    setFinalScore(scoreSum)
+  }
+
   return (
     <main className="text-black min-h-screen flex flex-col justify-center items-center bg-white">
       <h1 className="text-center mb-8 text-4xl w-5/6 p-5">
         Escore de avaliação de risco de Caprini
-        {score.reduce((acc, obj) => {
-            return acc + obj.value;
-          }, 0)}
       </h1>
-      <form className="flex flex-col justify-between border w-5/6 lg:w-3/6 items-center">
+      <form onSubmit={handleSubmit} className="flex flex-col justify-between border w-5/6 lg:w-3/6 items-center">
         <legend className="text-center mb-8 text-3xl w-full p-5">
           Fatores de risco
         </legend>
@@ -35,6 +41,8 @@ export default function Caprini() {
             {'>'}
           </button>
         </section>
+        {menuPage === 2 && <button className="w-20 bg-blue-600" type="submit">Calcular</button>}
+        {finalScore > 0 && finalScore}
       </form>
     </main>
   );
