@@ -1,6 +1,6 @@
 "use client"
 import { useState } from 'react';
-import Link from 'next/link';
+import Back from '@/components/Back/Back';
 import CapriniUl from '@/components/Caprini/CapriniUl'
 import { ScoreObj } from '@/components/types';
 import { ArrowLongLeftIcon, ArrowLongRightIcon } from '@heroicons/react/24/outline';
@@ -27,10 +27,7 @@ export default function Avaliacao() {
 
   return (
     <main className="text-black min-h-screen flex justify-center items-center bg-white">
-      <Link href="/menu" className="absolute z-50 p-5 md:p-6 lg:p-20 rounded-e rounded-b-lg top-0 left-0">
-        <ArrowLongLeftIcon className="mx-auto" width={24} />
-        <p className="hidden md:block text-xs">Voltar</p>
-      </Link>
+      <Back />
       <form onSubmit={handleSubmit} className="flex flex-col relative justify-evenly bg-white lg:border rounded-lg md:shadow-lg p-1 w-full md:p-12 md:w-5/6 lg:w-4/6 items-center">
         <legend className="text-center w-full ">
           <h1 className="md:text-4xl md:p-5 text-base font-bold mb-2 md:mb-0 md:block">

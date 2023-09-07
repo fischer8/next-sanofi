@@ -9,3 +9,9 @@ export type Prop = {
   menuPage: number;
 }
 
+export type Info = {
+  id: number,
+  img: string,
+  link: string,
+  title: string,
+}
