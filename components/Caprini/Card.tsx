@@ -7,7 +7,7 @@ export default function Card({ handleScore, score, menuPage }: Prop) {
     const isChecked = score.some((s) => s.id === id);
     return (
       <li className="mb-2" key={id}>
-        <input checked={isChecked} onClick={() => handleScore({ id, value })} className="cursor-pointer me-2" type="checkbox" id={id} />
+        <input checked={isChecked} onChange={() => handleScore({ id, value })} className="cursor-pointer me-2" type="checkbox" id={id} />
         <label className="cursor-pointer" htmlFor={id}>{ask}</label>
       </li>
     )

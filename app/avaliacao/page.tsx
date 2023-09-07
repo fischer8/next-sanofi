@@ -17,6 +17,7 @@ export default function Caprini() {
 
   const handleSubmit = (e: any) => {
     e.preventDefault()
+    console.log(typeof e)
     const scoreSum = score.reduce((acc, obj) => {
       return acc + obj.value
     }, 0)
