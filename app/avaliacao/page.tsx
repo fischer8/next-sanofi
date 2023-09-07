@@ -1,6 +1,6 @@
 "use client"
 import { useState } from 'react';
-import Back from '@/components/Back/Back';
+import Back from '@/components/Back';
 import CapriniUl from '@/components/Caprini/CapriniUl'
 import { ScoreObj } from '@/components/types';
 import { ArrowLongLeftIcon, ArrowLongRightIcon } from '@heroicons/react/24/outline';
