@@ -6,9 +6,9 @@ export default function CapriniUl({ handleScore, score, menuPage }: Prop) {
   const allQuestions = questions.map(({ id, ask, value }) => {
     const isChecked = score.some((s) => s.id === id);
     return (
-      <li className="mb-2" key={id}>
-        <input checked={isChecked} onChange={() => handleScore({ id, value })} className="cursor-pointer me-2" type="checkbox" id={id} />
-        <label className="cursor-pointer" htmlFor={id}>{ask}</label>
+      <li className="mb-2 border" key={id}>
+        <input checked={isChecked} onChange={() => handleScore({ id, value })} className="cursor-pointer ms-2 me-2" type="checkbox" id={`inp-${id}`} />
+        <label className="cursor-pointer p-1 inline-block w-11/12" htmlFor={`inp-${id}`}>{ask}</label>
       </li>
     )
   })
@@ -20,7 +20,7 @@ export default function CapriniUl({ handleScore, score, menuPage }: Prop) {
   const menuQuestions = [chunk1, chunk2, chunk3];
 
   return (
-    <ul className="w-5/6 border">
+    <ul className="w-5/6 mb-10 p-2 border">
       {menuQuestions[menuPage]}
     </ul>
   );

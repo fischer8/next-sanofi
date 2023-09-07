@@ -1,73 +1,47 @@
 //1 ponto
-const a1 = 'Idade entre 41 anos e 60 anos'
-const a2 = 'Cirurgia de grande porte (menos de 1 mês)'
-const a3 = 'Obesidade (IMC > 25)'
-const a4 = 'Varizes de mebros inferiores'
-const a5 = 'História de doença intestinal inflamatória'
-const a6 = 'Sepse (menos de 1 mês)'
-const a7 = 'Gravidez ou pós-parto (menos de 1 mês)'
-const a8 = 'Doença pulmonar grave incluindo pneumonia (menos de 1 mês)'
-const a9 = 'Edema recorrente de membros inferiores'
-const a10 = 'Infarto agudo do miocárdio'
-const a11 = 'Insulficiência cardíaca congestiva (menos de 1 mês)'
-const a12 = 'Doença pulmonar obstrutiva crônica'
-const a13 = 'Perda fetal/Aborto'
-const a14 = 'Uso de anticoncepcional ou terapia de reposição hormonal'
+const a1 = { id: 1, ask: 'Idade entre 41 anos e 60 anos', value: 1 }
+const a2 = { id: 2, ask: 'Cirurgia de grande porte (menos de 1 mês)', value: 1 }
+const a3 = { id: 3, ask: 'Obesidade (IMC > 25)', value: 1 }
+const a4 = { id: 4, ask: 'Varizes de mebros inferiores', value: 1 }
+const a5 = { id: 5, ask: 'História de doença intestinal inflamatória', value: 1 }
+const a6 = { id: 6, ask: 'Sepse (menos de 1 mês)', value: 1 }
+const a7 = { id: 7, ask: 'Gravidez ou pós-parto (menos de 1 mês)', value: 1 }
+const a8 = { id: 8, ask: 'Doença pulmonar grave incluindo pneumonia (menos de 1 mês)', value: 1 }
+const a9 = { id: 9, ask: 'Edema recorrente de membros inferiores', value: 1 }
+const a10 = { id: 10, ask: 'Infarto agudo do miocárdio', value: 1 }
+const a11 = { id: 11, ask: 'Insulficiência cardíaca congestiva (menos de 1 mês)', value: 1 }
+const a12 = { id: 12, ask: 'Doença pulmonar obstrutiva crônica', value: 1 }
+const a13 = { id: 13, ask: 'Perda fetal/Aborto', value: 1 }
+const a14 = { id: 14, ask: 'Uso de anticoncepcional ou terapia de reposição hormonal', value: 1 }
 
 //2 pontos
-const a15 = 'Idade entre 61 anos a 74 anos'
-const a16 = 'Cirurgia de artroscopia'
-const a17 = 'Cirurgia de grande porte (>45 minutos)'
-const a18 = 'Cirurgia laparoscópica (>45 minutos)'
-const a19 = 'Câncer'
-const a20 = 'Paciente confinado ao leito (>72 horas)'
-const a21 = 'Imobilização do membro (gesso/tala <1 mês)'
-const a22 = 'Acesso central venoso'
+const a15 = { id: 15, ask: 'Idade entre 61 anos a 74 anos', value: 2 }
+const a16 = { id: 16, ask: 'Cirurgia de artroscopia', value: 2 }
+const a17 = { id: 17, ask: 'Cirurgia de grande porte (>45 minutos)', value: 2 }
+const a18 = { id: 18, ask: 'Cirurgia laparoscópica (>45 minutos)', value: 2 }
+const a19 = { id: 19, ask: 'Câncer', value: 2 }
+const a20 = { id: 20, ask: 'Paciente confinado ao leito (>72 horas)', value: 2 }
+const a21 = { id: 21, ask: 'Imobilização do membro (gesso/tala <1 mês)', value: 2 }
+const a22 = { id: 22, ask: 'Acesso central venoso', value: 2 }
 
 //3 pontos
-const a23 = 'Idade acima de 75 anos'
-const a24 = 'História prévia de trombose venosa ou embolia pulmonar. Histórico familiar de trombose'
-const a25 = 'Fator V de leiden positivo'
-const a26 = 'Protrombina 20210 A positivo'
-const a27 = 'Anticoagulante lúpico positivo'
-const a28 = 'Homocisteína sérica elevada'
-const a29 = 'Anticorpos anticardiolipinas elevados'
-const a30 = 'Trombocitopenia induzida por heparina'
-const a31 = 'Trombofilia congênita ou adquirida'
+const a23 = { id: 23, ask: 'Idade acima de 75 anos', value: 3 }
+const a24 = { id: 24, ask: 'História prévia de trombose venosa ou embolia pulmonar. Ou histórico familiar', value: 3 }
+const a25 = { id: 25, ask: 'Fator V de leiden positivo', value: 3 }
+const a26 = { id: 26, ask: 'Protrombina 20210 A positivo', value: 3 }
+const a27 = { id: 27, ask: 'Anticoagulante lúpico positivo', value: 3 }
+const a28 = { id: 28, ask: 'Homocisteína sérica elevada', value: 3 }
+const a29 = { id: 29, ask: 'Anticorpos anticardiolipinas elevados', value: 3 }
+const a30 = { id: 30, ask: 'Trombocitopenia induzida por heparina', value: 3 }
+const a31 = { id: 31, ask: 'Trombofilia congênita ou adquirida', value: 3 }
 
 //5 pontos
-const a32 = 'Acidente vascular cerebral AVC (menos de 1 mês)'
-const a33 = 'Artroplatia de membros inferiores'
-const a34 = 'Fratura de pelve, coxa ou perna'
-const a35 = 'Politrauma (menos de 1 mês)'
-const a36 = 'Lesão medular - paralisia (menos de 1 mês)'
+const a32 = { id: 32, ask: 'Acidente vascular cerebral AVC (menos de 1 mês)', value: 5 }
+const a33 = { id: 33, ask: 'Artroplatia de membros inferiores', value: 5 }
+const a34 = { id: 34, ask: 'Fratura de pelve, coxa ou perna', value: 5 }
+const a35 = { id: 35, ask: 'Politrauma (menos de 1 mês)', value: 5 }
+const a36 = { id: 36, ask: 'Lesão medular - paralisia (menos de 1 mês)', value: 5 }
 
-const ask1 = {
-  v: 1,
-  ask: [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14]
-}
-
-const ask2 = {
-  v: 2,
-  ask: [a15, a16, a17, a18, a19, a20, a21, a22]
-}
-
-const ask3 = {
-  v: 3,
-  ask: [a23, a24, a25, a26, a27, a28, a29, a30, a31]
-}
-
-const ask5 = {
-  v: 5,
-  ask: [a32, a33, a34, a35, a36]
-}
-
-const questions = [ask1, ask2, ask3, ask5]
-
-const mapQuestions = questions.map(({ v, ask }, i1) => (ask.map((a, i2) => ({ id: `${i1}-${i2}`, ask: a, value: v }))))
-
-const [q1, q2, q3, q5] = mapQuestions;
-
-const allQuestions = [...q1, ...q2, ...q3, ...q5];
+const allQuestions = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32, a33, a34, a35, a36];
 
 export default allQuestions;

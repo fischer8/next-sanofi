@@ -1,5 +1,5 @@
 export type ScoreObj = {
-  id: string;
+  id: number;
   value: number;
 }
 
