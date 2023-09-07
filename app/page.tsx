@@ -6,8 +6,8 @@ export default function Terms() {
       <main className="min-h-screen text-center text-black bg-white flex items-center justify-center">
         <section className="bg-white border rounded-lg shadow-lg p-12 w-5/6 md:p-12 md:w-1/2">
           <Image
-            alt='sanofi'
-            src='/Sanofi-2022.png'
+            alt='logo sanofi'
+            src='/sanofi-logo.png'
             width={200}
             height={300}
             className='mx-auto'
@@ -22,8 +22,8 @@ export default function Terms() {
           <p className='mb-2'>
             Eu declaro ser um profissional médico
           </p>
-          <Link href="/home">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white py-1 px-4 rounded">
+          <Link href="/menu">
+          <button className="bg-purple-700 hover:bg-purple-900 text-white py-1 px-4 rounded">
             Aceitar
           </button>
           </Link>

@@ -10,16 +10,16 @@ type Info = {
   title: string,
 }
 
-export default function Card({ cardInfo }: { cardInfo: Info }) {
+export default function Card({ cardInfo } : { cardInfo: Info }) {
   return (
     <section className="border rounded p-3 flex flex-col justify-between text-center items-center">
       <Image className="h-44 mb-4" src={cardInfo.img} alt={`Image ${cardInfo.id}`} width={250} height={200} />
-      <section>
-        <h3 className="mb-2">
+      <section className="w-full"> 
+        <h3 className="text-lg mb-2">
           {cardInfo.title}
-        </h3>
+       </h3>
         <Link href={`/${cardInfo.link}`}>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white py-1 px-4 rounded">
+          <button className="font-bold opacity-95 h-12 bg-purple-700 hover:bg-purple-900 w-full text-white py-1 px-4 rounded">
             {cardInfo.btn}
           </button>
         </Link>
