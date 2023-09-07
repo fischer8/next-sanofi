@@ -25,11 +25,11 @@ export default function Avaliacao() {
   }
 
   return (
-    <main className="text-black min-h-screen flex flex-col justify-center items-center bg-white">
+    <main className="text-black min-h-screen flex justify-center items-center bg-white">
       <form onSubmit={handleSubmit} className="flex flex-col relative justify-evenly bg-white md:border rounded-lg md:shadow-lg p-1 w-full md:p-12 md:w-5/6 lg:w-4/6 items-center">
-        <legend className="text-center text-3xl w-full ">
+        <legend className="text-center w-full ">
           <h1 className="md:text-4xl md:p-5 text-base font-bold mb-2 md:mb-0 md:block">
-            Escore de avaliação de risco {'\n'} de Caprini
+            Escore de avaliação de risco de Caprini
           </h1>
         </legend>
         <CapriniUl handleScore={handleScore} score={score} menuPage={menuPage} />
@@ -42,7 +42,6 @@ export default function Avaliacao() {
           </button>
         </section>
         <button className="p-2 md:p-3 rounded bg-purple-500 text-white w-5/6 hover:bg-purple-800 font-bold" type="submit">Calcular</button>
-        {/*menuPage === 2 && <button className="ps-6 pe-6 p-3 rounded bg-purple-600 text-white font-bold" type="submit">Calcular</button>*/}
       </form>
     </main>
   );
