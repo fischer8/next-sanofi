@@ -26,20 +26,21 @@ export default function Avaliacao() {
 
   return (
     <main className="text-black min-h-screen flex flex-col justify-center items-center bg-white">
-      <h1 className="text-center mb-8 text-4xl w-5/6 p-5 hidden md:block">
-        Escore de avaliação de risco de Caprini
-      </h1>
-
-      <form onSubmit={handleSubmit} className="flex flex-col relative justify-between bg-white border rounded-lg shadow-lg p-12 w-full md:p-12 md:w-5/6 lg:w-3/6 items-center">
-        <legend className="text-center mb-8 text-3xl w-full p-5">
-          Fatores de risco
+      <form onSubmit={handleSubmit} className="flex flex-col relative justify-evenly bg-white md:border rounded-lg md:shadow-lg p-1 w-full md:p-12 md:w-5/6 lg:w-3/6 items-center">
+        <legend className="text-center mb-2 text-3xl w-full p-5">
+          <h1 className="text-center md:text-4xl md:p-5 text-xl md:block">
+            Escore de avaliação de risco de Caprini
+          </h1>
+          <h1 className="hidden text-xl">
+            Fatores de risco
+          </h1>
         </legend>
         <CapriniUl handleScore={handleScore} score={score} menuPage={menuPage} />
         <section className="text-center lg:w-3/6 w-4/6">
-          <button type="button" className="rounded w-2/6 p-3 me-2 bg-purple-500 hover:bg-purple-700 disabled:bg-purple-300" onClick={() => setMenuPage((o) => o - 1)} disabled={menuPage <= 0}>
+          <button type="button" className="rounded w-2/6 border p-3 me-2 bg-purple-600 hover:bg-purple-900 disabled:bg-purple-100" onClick={() => setMenuPage((o) => o - 1)} disabled={menuPage <= 0}>
             <ArrowLongLeftIcon className="mx-auto" width={24} />
           </button>
-          <button type="button" className="rounded w-2/6 p-3 bg-purple-500 hover:bg-purple-700 disabled:bg-purple-300" onClick={() => setMenuPage((o) => o + 1)} disabled={menuPage >= 2}>
+          <button type="button" className="rounded w-2/6 p-3 border bg-purple-600 hover:bg-purple-900 disabled:bg-purple-100" onClick={() => setMenuPage((o) => o + 1)} disabled={menuPage >= 2}>
             <ArrowLongRightIcon className="mx-auto" width={24} />
           </button>
         </section>

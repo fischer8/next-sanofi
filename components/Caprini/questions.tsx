@@ -26,7 +26,7 @@ const a22 = { id: 22, ask: 'Acesso central venoso', value: 2 }
 
 //3 pontos
 const a23 = { id: 23, ask: 'Idade acima de 75 anos', value: 3 }
-const a24 = { id: 24, ask: 'História prévia de trombose venosa ou embolia pulmonar. Ou histórico familiar', value: 3 }
+const a24 = { id: 24, ask: 'História prévia de trombose venosa ou embolia pulmonar. Histórico familiar', value: 3 }
 const a25 = { id: 25, ask: 'Fator V de leiden positivo', value: 3 }
 const a26 = { id: 26, ask: 'Protrombina 20210 A positivo', value: 3 }
 const a27 = { id: 27, ask: 'Anticoagulante lúpico positivo', value: 3 }
