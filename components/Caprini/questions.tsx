@@ -44,10 +44,9 @@ const a36 = { id: 36, ask: 'Lesão medular - paralisia (menos de 1 mês)', value
 
 const allQuestions = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32, a33, a34, a35, a36];
 
-
 const chunk1 = allQuestions.slice(0, 12);
-const chunk2 = allQuestions.slice(12, 2 * 12);
-const chunk3 = allQuestions.slice(2 * 12);
+const chunk2 = allQuestions.slice(12, 24);
+const chunk3 = allQuestions.slice(24);
 
 const questions = [chunk1, chunk2, chunk3];
 
