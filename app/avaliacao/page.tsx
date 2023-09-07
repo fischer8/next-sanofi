@@ -1,9 +1,9 @@
 "use client"
 import { useState } from 'react';
-import Card from '@/components/Caprini/Card'
+import CapriniUl from '@/components/Caprini/CapriniUl'
 import { ScoreObj } from '@/components/types';
 
-export default function Caprini() {
+export default function Avaliacao() {
   const [score, setScore] = useState<ScoreObj[]>([]);
   const [menuPage, setMenuPage] = useState(0)
   const [finalScore, setFinalScore] = useState(0)
@@ -33,7 +33,7 @@ export default function Caprini() {
         <legend className="text-center mb-8 text-3xl w-full p-5">
           Fatores de risco
         </legend>
-        <Card handleScore={handleScore} score={score} menuPage={menuPage} />
+        <CapriniUl handleScore={handleScore} score={score} menuPage={menuPage} />
         <section>
           <button type="button" className="w-12 bg-blue-600 disabled:bg-blue-200" onClick={() => setMenuPage((o) => o - 1)} disabled={menuPage <= 0}>
             {'<'}

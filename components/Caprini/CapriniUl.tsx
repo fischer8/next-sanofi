@@ -2,7 +2,7 @@ import React from 'react';
 import questions from './questions';
 import { Prop } from '../types';
 
-export default function Card({ handleScore, score, menuPage }: Prop) {
+export default function CapriniUl({ handleScore, score, menuPage }: Prop) {
   const allQuestions = questions.map(({ id, ask, value }) => {
     const isChecked = score.some((s) => s.id === id);
     return (
