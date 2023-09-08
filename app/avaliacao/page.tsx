@@ -29,7 +29,7 @@ export default function Avaliacao() {
   }
 
   return (
-    <main className="text-black min-h-screen flex justify-center items-center bg-white">
+    <main className="relative text-black min-h-screen flex justify-center items-center bg-white">
       <Back />
       <form onSubmit={handleSubmit} className="flex flex-col justify-evenly bg-white lg:border rounded-lg md:shadow-lg p-1 w-full md:p-12 md:w-5/6 lg:w-4/6 items-center">
         <legend className="text-center w-full ">
