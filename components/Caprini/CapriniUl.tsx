@@ -14,7 +14,7 @@ export default function CapriniUl({ handleScore, score, menuPage }: Prop) {
   })
 
   return (
-    <ul className="w-5/6 mb-2 md:mb-2 p-2">
+    <ul className="w-5/6 mb-2 p-2">
       {allQuestions}
     </ul>
   );

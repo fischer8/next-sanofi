@@ -43,7 +43,7 @@ export default function Avaliacao() {
             <ArrowLongRightIcon className="mx-auto text-white" width={24} />
           </button>
         </section>
-        <button className="p-2 md:p-3 rounded bg-purple-500 text-white w-5/6 hover:bg-purple-800 font-bold" type="submit">Calcular</button>
+        <button className="p-2 md:p-3 rounded bg-purple-500 text-white w-5/6 hover:bg-purple-800 font-bold" type="submit">Escore</button>
       </form>
     </main>
   );
