@@ -2,9 +2,9 @@
 import { useState } from 'react';
 import Back from '@/components/Back';
 import CapriniUl from '@/components/Caprini/CapriniUl'
+import CapriniModal from '@/components/Caprini/CapriniModal';
 import { ScoreObj } from '@/components/types';
 import { ArrowLongLeftIcon, ArrowLongRightIcon } from '@heroicons/react/24/outline';
-import CapriniResult from '@/components/Caprini/CapriniResult';
 
 export default function Avaliacao() {
   const [score, setScore] = useState<ScoreObj[]>([]);
@@ -48,7 +48,7 @@ export default function Avaliacao() {
         </section>
         <button className="p-2 md:p-3 rounded bg-purple-500 text-white w-5/6 hover:bg-purple-800 font-bold" type="submit">Escore</button>
       </form>
-      {showResult && <CapriniResult score={finalScore} show={setShowResult}/>}
+      {showResult && <CapriniModal score={finalScore} show={setShowResult}/>}
     </main>
   );
 }
