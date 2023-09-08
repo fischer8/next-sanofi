@@ -19,7 +19,7 @@ export default function Avaliacao() {
     setScore((old) => [...old, rawScore])
   }
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     const scoreSum = score.reduce((acc, obj) => {
       return acc + obj.value
@@ -32,7 +32,7 @@ export default function Avaliacao() {
     <main className="relative text-black min-h-screen flex justify-center items-center bg-white">
       <Back />
       <form onSubmit={handleSubmit} className="flex flex-col justify-evenly bg-white lg:border rounded-lg md:shadow-lg p-1 w-full md:p-12 md:w-5/6 lg:w-4/6 items-center">
-        <legend className="text-center w-full ">
+        <legend className="text-center w-full">
           <h1 className="md:text-4xl md:p-5 text-base font-bold mb-2 md:mb-0 md:block">
             Escore de avaliação de risco de Caprini
           </h1>
@@ -48,7 +48,7 @@ export default function Avaliacao() {
         </section>
         <button className="p-2 md:p-3 rounded bg-purple-500 text-white w-5/6 hover:bg-purple-800 font-bold" type="submit">Escore</button>
       </form>
-      {showResult && <CapriniModal score={finalScore} show={setShowResult}/>}
+      {showResult && <CapriniModal score={finalScore} show={setShowResult} />}
     </main>
   );
 }
