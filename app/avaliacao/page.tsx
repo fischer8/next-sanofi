@@ -4,11 +4,13 @@ import Back from '@/components/Back';
 import CapriniUl from '@/components/Caprini/CapriniUl'
 import { ScoreObj } from '@/components/types';
 import { ArrowLongLeftIcon, ArrowLongRightIcon } from '@heroicons/react/24/outline';
+import CapriniResult from '@/components/Caprini/CapriniResult';
 
 export default function Avaliacao() {
   const [score, setScore] = useState<ScoreObj[]>([]);
   const [menuPage, setMenuPage] = useState(0)
   const [finalScore, setFinalScore] = useState(0)
+  const [showResult, setShowResult] = useState(false)
 
   const handleScore = (rawScore: ScoreObj) => {
     if (score.find((s) => s.id === rawScore.id)) {
@@ -23,12 +25,13 @@ export default function Avaliacao() {
       return acc + obj.value
     }, 0)
     setFinalScore(scoreSum)
+    setShowResult(true)
   }
 
   return (
     <main className="text-black min-h-screen flex justify-center items-center bg-white">
       <Back />
-      <form onSubmit={handleSubmit} className="flex flex-col relative justify-evenly bg-white lg:border rounded-lg md:shadow-lg p-1 w-full md:p-12 md:w-5/6 lg:w-4/6 items-center">
+      <form onSubmit={handleSubmit} className="flex flex-col justify-evenly bg-white lg:border rounded-lg md:shadow-lg p-1 w-full md:p-12 md:w-5/6 lg:w-4/6 items-center">
         <legend className="text-center w-full ">
           <h1 className="md:text-4xl md:p-5 text-base font-bold mb-2 md:mb-0 md:block">
             Escore de avaliação de risco de Caprini
@@ -45,6 +48,7 @@ export default function Avaliacao() {
         </section>
         <button className="p-2 md:p-3 rounded bg-purple-500 text-white w-5/6 hover:bg-purple-800 font-bold" type="submit">Escore</button>
       </form>
+      {showResult && <CapriniResult score={finalScore} show={setShowResult}/>}
     </main>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
-import Card from '@/components/Card/Card';
-import cardInfo from '@/components/Card/info';
+import Card from '@/components/Menu/Card';
+import cardInfo from '@/components/Menu/info';
 
 export default function Menu() {
   return (
