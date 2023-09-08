@@ -3,7 +3,7 @@ import { ScoreResult } from "../types";
 
 export default function CapriniModal({ score, show }: ScoreResult) {
   return (
-    <section className="absolute top-0 bottom-0 w-full bg-opacity-40 bg-black">
+    <section className="absolute z-20 top-0 bottom-0 w-full bg-opacity-40 bg-black">
       <section className="w-5/6 md:w-4/6 mt-32 opacity-100 p-10 border rounded mx-auto bg-white flex flex-col items-center">
         {score}
        <section className="flex flex-row justify-between w-5/6 lg:w-4/6">
