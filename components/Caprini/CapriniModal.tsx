@@ -3,12 +3,11 @@ import { ScoreResult } from "../types";
 
 export default function CapriniModal({ score, show }: ScoreResult) {
   let risk = 'Risco Baixo';
-  if (score >= 5) {
+  if (score > 4) {
     risk = 'Risco Alto';
   } else if (score > 2) {
     risk = 'Risco Moderado'
   }
-
   return (
     <section className="absolute z-20 top-0 bottom-0 w-full md:bg-opacity-50 flex items-center align-middle md:bg-black">
       <section className="absolute top-0 bottom-0 md:static w-full md:w-5/6 md:p-24 md:border rounded md:mx-auto bg-white flex flex-col items-center justify-center">
