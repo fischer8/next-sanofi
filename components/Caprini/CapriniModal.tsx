@@ -1,5 +1,6 @@
 import React from "react";
 import { ScoreResult } from "../types";
+import pdfCaprini from "../JsPdf/pdfCaprini";
 
 export default function CapriniModal({ score, show }: ScoreResult) {
   let risk = 'Risco Baixo';
@@ -32,7 +33,7 @@ export default function CapriniModal({ score, show }: ScoreResult) {
           </section>
         </section>
         <section className="flex flex-col md:flex-row justify-between w-5/6 lg:w-4/6">
-          <button className="bg-purple-500 hover:bg-purple-800 w-full mb-2 md:mb-0 md:w-3/6 md:me-2 text-white py-2 md:py-4 rounded">
+          <button onClick={() => pdfCaprini(risk, score)}className="bg-purple-500 hover:bg-purple-800 w-full mb-2 md:mb-0 md:w-3/6 md:me-2 text-white py-2 md:py-4 rounded">
             Gerar PDF
           </button>
           <button onClick={() => show(false)} className="bg-purple-500 w-full md:w-3/6 hover:bg-purple-800 text-white py-2 md:py-4 rounded">
