@@ -2,21 +2,19 @@ import React from "react";
 import { ScoreResult } from "../types";
 
 export default function CapriniModal({ score, show }: ScoreResult) {
-  const risk = ['Risco Baixo', 'Risco Moderado', 'Risco Alto'];
-  let riskId = 0;
-  if (score > 0 && score < 3) {
-    riskId = 0;
-  } else if (score >= 3 && score < 5) {
-    riskId = 1;
+  let risk = '';
+  if (score < 3) {
+    risk = 'Risco Baixo';
+  } else if (score < 5) {
+    risk = 'Risco Moderado';
   } else if (score >= 5) {
-    riskId = 2;
+    risk = 'Risco Alto';
   }
-
   return (
-    <section className="absolute z-20 top-0 bottom-0 w-full md:bg-opacity-40 flex items-center align-middle md:bg-black">
+    <section className="absolute z-20 top-0 bottom-0 w-full md:bg-opacity-50 flex items-center align-middle md:bg-black">
       <section className="absolute top-0 bottom-0 md:static w-full md:w-5/6 md:p-24 md:border rounded md:mx-auto bg-white flex flex-col items-center justify-center">
         <h2 className="font-bold text-2x1 md:text-xl mb-5 pb-5">
-          {risk[riskId]}
+          {risk}
         </h2>
         <h2 className="text-base mb-5">
           Escore: {score}
