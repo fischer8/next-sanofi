@@ -16,13 +16,11 @@ export default function pdfHeader(risk: { id: number, risk: string }, score: num
   }
 
   const capriniDescription = [
-    'O escore de Caprini, também conhecido como Escore de Risco de Trombose Venosa', 
-    'Profunda (TVP), é uma ferramenta utilizada na área médica para avaliar o risco de',
-    'um paciente desenvolver trombose venosa profunda, uma condição em que coágulos',
-    'sanguíneos se formam nas veias profundas do corpo, geralmente nas pernas.',
+    'Este escore foi desenvolvido pelo Dr. Victor F. Caprini',
     ' ',
-    'Este escore foi desenvolvido pelo Dr. Victor F. Caprini e se baseia em uma série de',
-    'fatores de risco que podem aumentar a probabilidada de uma pessoa desenvolver TVP.'
+    'Para chegar nesse resultado é levado em consideração',
+    'uma série de fatores de risco que podem aumentar a',
+    'probabilidade de uma pessoa desenvolver TVP.',
   ]
 
   var doc = new jsPDF();
@@ -40,9 +38,9 @@ export default function pdfHeader(risk: { id: number, risk: string }, score: num
   doc.setFontSize(14);
   doc.text(description, 14, 80);
   doc.setFontSize(16);
-  doc.text('Sobre', 14, 130)
+  doc.text('Sobre', 14, 120)
   doc.setFontSize(13);
-  doc.text(capriniDescription, 14, 140)
-  doc.save(`appTEV-${dateTime[0]}`)
+  doc.text(capriniDescription, 14, 130)
+  doc.save(`WebTEV-${dateTime[0]}`)
 }
 
