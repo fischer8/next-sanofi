@@ -4,7 +4,7 @@ import { ShowInfo } from '@/components/types'
 
 export default function InfoModal({ handleShow }: ShowInfo) {
   return (
-    <section className="absolute z-20 top-0 bottom-0 w-full md:bg-opacity-70 flex items-center align-middle md:bg-black">
+    <section className="absolute z-20 top-0 bottom-0 w-full md:bg-opacity-80 flex items-center align-middle md:bg-black">
       <section className="absolute top-0 bottom-0 md:py-20 md:static w-full md:w-4/6 lg:w-5/12 md:border rounded-2xl md:mx-auto bg-white flex flex-col items-center justify-center">
         <Image
           alt='logo sanofi'

@@ -12,7 +12,7 @@ export default function CapriniModal({ score, show }: ScoreResult) {
     risk = { id: 0, risk: 'Risco Muito Baixo' };
   }
   return (
-    <section className="absolute z-20 top-0 bottom-0 w-full md:bg-opacity-50 flex items-center align-middle md:bg-black">
+    <section className="absolute z-20 top-0 bottom-0 w-full md:bg-opacity-80 flex items-center align-middle md:bg-black">
       <section className="absolute top-0 bottom-0 md:static w-full md:w-5/6 md:py-24 md:border rounded md:mx-auto bg-white flex flex-col items-center justify-center">
         <h2 className="font-bold text-2x1 md:text-xl mb-5 pb-5">
           {risk.risk}

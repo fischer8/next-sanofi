@@ -2,6 +2,9 @@ import { jsPDF } from 'jspdf';
 
 export default function pdfHeader(risk: { id: number, risk: string }, score: number) {
   let description: string[] = [];
+  if (risk.id === 0) {
+    description = ['Deambulação precoce.']
+  }
   if (risk.id === 1) {
     description = ['Profilaxia mecânica (CPI).']
   }
@@ -11,9 +14,16 @@ export default function pdfHeader(risk: { id: number, risk: string }, score: num
   if (risk.id === 3) {
     description = ['Profilaxia farmacológica (HNF ou HBPM).', 'Profilaxia mecânica (CPI ou meias antitrombo).', ' ', 'Pacientes de alto risco submetidos à cirurgia oncológica', 'abdominal e pélvica: estender a profilaxia por 4 semanas.']
   }
-  if (risk.id === 0) {
-    description = ['Deambulação precoce.']
-  }
+
+  const capriniDescription = [
+    'O escore de Caprini, também conhecido como Escore de Risco de Trombose Venosa', 
+    'Profunda (TVP), é uma ferramenta utilizada na área médica para avaliar o risco de',
+    'um paciente desenvolver trombose venosa profunda, uma condição em que coágulos',
+    'sanguíneos se formam nas veias profundas do corpo, geralmente nas pernas.',
+    ' ',
+    'Este escore foi desenvolvido pelo Dr. Victor F. Caprini e se baseia em uma série de',
+    'fatores de risco que podem aumentar a probabilidada de uma pessoa desenvolver TVP.'
+  ]
 
   var doc = new jsPDF();
   const dateTime = new Date().toLocaleString('pt-BR', { hour12: false }).split(', ');
@@ -29,7 +39,10 @@ export default function pdfHeader(risk: { id: number, risk: string }, score: num
   doc.text('Recomendações', 14, 70);
   doc.setFontSize(14);
   doc.text(description, 14, 80);
-  doc.text('Teste stub text', 14, 115)
+  doc.setFontSize(16);
+  doc.text('Sobre', 14, 130)
+  doc.setFontSize(13);
+  doc.text(capriniDescription, 14, 140)
   doc.save(`appTEV-${dateTime[0]}`)
 }
 
