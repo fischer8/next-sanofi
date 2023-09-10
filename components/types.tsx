@@ -3,6 +3,11 @@ export type ScoreObj = {
   value: number;
 }
 
+export type ShowInfo = {
+  handleShow: (a: boolean) => void;
+}
+
+
 export type ModalCard = {
     num: string;
     title: string;
