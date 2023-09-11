@@ -19,10 +19,10 @@ export default function Terms() {
           As infomações contidas neste site são direcionadas <b>exclusivamente ao profissional de saúde</b> autorizado a prescrever ou dispensar medicamentos no Brasil.
           O WebTEV auxilia médicos, enfermeiros, farmacêuticos e outros profissionais de saúde qualificados e fornece conhecimento especializado e recursos relevantes para apoiar suas práticas clínicas.
         </p>
-        <p className='mb-2'>
+        <p className='font-bold mb-2'>
           Eu declaro ser um profissional médico
         </p>
-        <Link href="/menu">
+        <Link href="/avaliacao">
           <button className="bg-purple-700 hover:bg-purple-900 text-white py-1 px-6 md:px-4 rounded">
             Aceitar
           </button>
