@@ -16,7 +16,8 @@ export default function pdfHeader(risk: { id: number, risk: string }, score: num
   }
 
   const capriniDescription = [
-    'Este escore foi desenvolvido pelo Dr. Victor F. Caprini',
+    'Este escore foi determinado por um algoritmo desenvolvido', 
+    'pelo Dr. Victor F. Caprini.',
     ' ',
     'Para chegar nesse resultado é levado em consideração',
     'uma série de fatores de risco que podem aumentar a',
@@ -38,9 +39,9 @@ export default function pdfHeader(risk: { id: number, risk: string }, score: num
   doc.setFontSize(14);
   doc.text(description, 14, 80);
   doc.setFontSize(16);
-  doc.text('Sobre', 14, 120)
+  doc.text('Sobre', 14, 125)
   doc.setFontSize(13);
-  doc.text(capriniDescription, 14, 130)
-  doc.save(`WebTEV-${dateTime[0]}`)
+  doc.text(capriniDescription, 14, 135)
+  doc.save(`WebTEV-${dateTime[0]}-${dateTime[1]}`)
 }
 
