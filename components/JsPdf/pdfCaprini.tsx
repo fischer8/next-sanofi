@@ -28,7 +28,7 @@ export default function pdfHeader(risk: { id: number, risk: string }, score: num
   const dateTime = new Date().toLocaleString('pt-BR', { hour12: false }).split(', ');
   doc.addImage('/sanofi-sm-lg.png', 176, 7, 20, 6);
   doc.setFontSize(14);
-  doc.text(`${dateTime[0]} ${dateTime[1]}`, 14, 12);
+  doc.text(dateTime[0], 14, 12);
   doc.line(0, 22, 225, 22);
   doc.setFontSize(16);
   doc.text(`Escore ${score}`, 14, 40);
@@ -42,6 +42,6 @@ export default function pdfHeader(risk: { id: number, risk: string }, score: num
   doc.text('Sobre', 14, 125)
   doc.setFontSize(13);
   doc.text(capriniDescription, 14, 135)
-  doc.save(`WebTEV-${dateTime[0]}-${dateTime[1]}`)
+  doc.save(`WebTEV-${dateTime[0]}`)
 }
 
