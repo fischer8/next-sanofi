@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function Terms() {
   return (
     <main className="md:min-h-screen text-center text-black md:bg-white md:flex md:items-center md:justify-center">
-      <section className="bg-white absolute top-0 bottom-0 md:static md:border md:rounded-lg md:shadow-lg flex flex-col justify-center p-16 md:p-12 w-full md:w-1/2">
+      <section className="bg-white absolute top-0 bottom-0 md:static md:border md:rounded-lg md:shadow-lg flex flex-col justify-center p-12 w-full md:w-1/2">
         <Image
           alt='logo sanofi'
           src='/sanofi-logo.png'
@@ -23,7 +23,7 @@ export default function Terms() {
           Eu declaro ser um profissional médico
         </p>
         <Link href="/avaliacao">
-          <button className="bg-purple-700 hover:bg-purple-900 text-white py-1 px-6 md:px-4 rounded">
+          <button className="bg-purple-700 hover:bg-purple-900 text-white py-1 px-10 md:px-4 rounded">
             Aceitar
           </button>
         </Link>
