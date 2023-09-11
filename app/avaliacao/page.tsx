@@ -1,6 +1,6 @@
 "use client"
 import { useState } from 'react';
-import Back from '@/components/Back';
+//import Back from '@/components/Back';
 import CapriniUl from '@/components/Caprini/CapriniUl'
 import CapriniModal from '@/components/Caprini/CapriniModal';
 import { ScoreObj } from '@/components/types';
@@ -30,7 +30,7 @@ export default function Avaliacao() {
 
   return (
       <main className="text-black absolute w-full top-0 bottom-0 md:relative md:min-h-screen flex justify-center items-center bg-white">
-        <Back />
+        {/*<Back />*/}
         <form onSubmit={handleSubmit} className="flex flex-col justify-evenly bg-white lg:border rounded-lg md:shadow-lg p-1 w-full md:p-12 md:w-5/6 lg:w-4/6 items-center">
           <legend className="text-center w-full">
             <h1 className="md:text-4xl md:p-5 text-base font-bold mb-2 md:mb-0 md:block">
