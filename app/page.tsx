@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image'
 import Link from 'next/link'
-import verify from '@/components/Api/api';
 import Cookies from 'js-cookie';
+import verify from '@/components/Api/api';
 import states from '@/components/states';
 import { AuthInfo } from '@/components/types';
 
@@ -65,8 +65,6 @@ export default function Terms() {
             Aceitar
           </button>
         </form>
-        <Link href="/avaliacao">
-        </Link>
       </section>
     </main>
   );
