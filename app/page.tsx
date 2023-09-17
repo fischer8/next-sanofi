@@ -43,7 +43,7 @@ export default function Terms() {
         <h1 className="text-2xl font-bold mb-4">
           WebTEV
         </h1>
-        <p className="text-gray-600 mb-6 md:mb-9 md:w-5/6 md:mx-auto">
+        <p className="text-gray-600 mb-6 md:w-5/6 md:mx-auto">
           As infomações contidas neste site são direcionadas <b>exclusivamente ao profissional de saúde</b> autorizado a prescrever ou dispensar medicamentos no Brasil.
           O WebTEV auxilia médicos, enfermeiros, farmacêuticos e outros profissionais de saúde qualificados e fornece conhecimento especializado e recursos relevantes para apoiar suas práticas clínicas.
         </p>
@@ -55,7 +55,7 @@ export default function Terms() {
             </section>
             <section className="w-2/6" >
               <label className="me-1 font-bold" htmlFor="uf">UF</label>
-              <select className="rounded p-1 mb-5" onChange={handleChange} value={info.uf} required id="uf">
+              <select className="rounded p-1 cursor-pointer border mb-5" onChange={handleChange} value={info.uf} required id="uf">
                 {states.map((state) => <option value={state} key={state}>{state}</option>)}
               </select>
             </section>
