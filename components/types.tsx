@@ -7,16 +7,15 @@ export type ShowInfo = {
   handleShow: (a: boolean) => void;
 }
 
-
 export type ModalCard = {
-    num: string;
-    title: string;
-    description: string;
+  num: string;
+  title: string;
+  description: string;
 }
 
 export type ScoreResult = {
-    score: number;
-    show: (a: boolean) => void;
+  score: number;
+  show: (a: boolean) => void;
 }
 
 export type Prop = {
@@ -30,4 +29,9 @@ export type Info = {
   img: string,
   link: string,
   title: string,
+}
+
+export type AuthInfo = {
+  crm: number;
+  uf: string;
 }
