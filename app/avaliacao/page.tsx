@@ -1,6 +1,6 @@
 "use client"
 import { useState } from 'react';
-//import Back from '@/components/Back';
+import Back from '@/components/Back';
 //import InfoButton from '@/components/InfoButton/InfoButton';
 //import InfoModal from '@/components/InfoButton/InfoModal';
 import CapriniUl from '@/components/Caprini/CapriniUl'
@@ -33,7 +33,7 @@ export default function Avaliacao() {
 
   return (
     <main className="text-black absolute w-full top-0 bottom-0 md:relative md:min-h-screen flex justify-center items-center bg-white">
-      {/*<Back />*/}
+      <Back />
       {/*showInfo ? <InfoModal handleShow={setShowInfo} /> : <InfoButton handleShow={setShowInfo} />*/}
       <form onSubmit={handleSubmit} className="flex flex-col justify-evenly bg-white lg:border rounded-lg md:shadow-lg p-1 w-full md:p-12 md:w-5/6 lg:w-4/6 items-center">
         <legend className="text-center w-full">

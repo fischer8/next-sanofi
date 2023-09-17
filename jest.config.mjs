@@ -4,12 +4,13 @@ const createJestConfig = nextJest({
   // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
   dir: './',
 })
- 
+ const ignoredModules = ["next"].join("|")
 // Add any custom config to be passed to Jest
 /** @type {import('jest').Config} */
 const config = {
   // Add more setup options before each test is run
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  transformIgnorePatterns: [`/node_modules/(?!${ignoredModules})`],
   moduleNameMapper: {
     pdfHeader:'<rootDir>/__mocks__/fileMock.js',
     jspdf: '<rootDir>/__mocks__/fileMock.js',

@@ -2,14 +2,13 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image'
-import Link from 'next/link'
 import Cookies from 'js-cookie';
 import verify from '@/components/Api/api';
 import states from '@/components/states';
 import { AuthInfo } from '@/components/types';
 
 export default function Terms() {
-  const [info, setInfo] = useState<AuthInfo>({ crm: 0, uf: "" });
+  const [info, setInfo] = useState<AuthInfo>({ crm: 0, uf: "AC" });
   const router = useRouter();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
@@ -33,7 +32,7 @@ export default function Terms() {
 
   return (
     <main className="md:min-h-screen text-center text-black md:bg-white md:flex md:items-center md:justify-center">
-      <section className="bg-white absolute top-0 bottom-0 md:static md:border md:rounded-lg md:shadow-lg flex flex-col justify-center py-12 px-2 w-full md:w-1/2">
+      <section className="bg-white absolute top-0 bottom-0 md:static md:border md:rounded-lg md:shadow-lg flex flex-col justify-center py-12 px-6 md:px-2 w-full md:w-1/2">
         <Image
           alt='logo sanofi'
           src='/sanofi-logo.png'
