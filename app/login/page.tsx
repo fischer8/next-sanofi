@@ -1,46 +1,33 @@
-"use client"
-import { useState } from 'react';
-import verify from '@/components/Api/api';
+import Image from 'next/image'
+import Link from 'next/link'
 
-interface Info {
-  crm: number;
-  uf: string;
-}
-
-export default function Login() {
-  const [info, setInfo] = useState<Info>({ crm: 0, uf: "" });
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
-    const { value, id } = event.target;
-    setInfo((old) => ({
-      ...old,
-      [id]: value,
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const status = await verify(info.uf, info.crm);
-    if (status === "Ativo") {
-      alert(status)
-    }
-  }
-
+export default function Terms() {
   return (
-    <main className="absolute w-full top-0 bottom-0 md:relative md:min-h-screen flex justify-center items-center bg-white">
-      <form onSubmit={handleSubmit} className='text-black p-16 border rounded mx-auto flex flex-col justify-between'>
-          <label htmlFor="crm">CRM</label>
-          <input className="mb-5 border w-3/6" required id='crm' type="number" onChange={handleChange} value={info.crm === 0 ? '' : info.crm} />
-          <label htmlFor="uf">UF</label>
-          <select className="rounded p-1 w-3/12 mb-5" onChange={handleChange} value={info.uf} required id="uf">
-            <option selected value="SP">SP</option>
-            <option value="MG">MG</option>
-          </select>
-        <button className="border rounded bg-purple-500 text-white p-2" type='submit'>
-          test
-        </button>
-      </form>
+    <main className="md:min-h-screen text-center text-black md:bg-white md:flex md:items-center md:justify-center">
+      <section className="bg-white absolute top-0 bottom-0 md:static md:border md:rounded-lg md:shadow-lg flex flex-col justify-center p-12 w-full md:w-1/2">
+        <Image
+          alt='logo sanofi'
+          src='/sanofi-logo.png'
+          width={200}
+          height={300}
+          className='mx-auto'
+        />
+        <h1 className="text-2xl font-bold mb-4">
+          WebTEV
+        </h1>
+        <p className="text-gray-600 mb-6 md:mb-9">
+          As infomações contidas neste site são direcionadas <b>exclusivamente ao profissional de saúde</b> autorizado a prescrever ou dispensar medicamentos no Brasil.
+          O WebTEV auxilia médicos, enfermeiros, farmacêuticos e outros profissionais de saúde qualificados e fornece conhecimento especializado e recursos relevantes para apoiar suas práticas clínicas.
+        </p>
+        <p className='font-bold mb-2'>
+          Eu declaro ser um profissional médico
+        </p>
+        <Link href="/avaliacao">
+          <button className="bg-purple-700 hover:bg-purple-900 text-white py-1 px-10 md:px-4 rounded">
+            Aceitar
+          </button>
+        </Link>
+      </section>
     </main>
-  );
+  )
 }
-
