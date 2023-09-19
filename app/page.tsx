@@ -26,6 +26,7 @@ export default function Terms() {
       method: "POST",
       body: JSON.stringify({ crm: crm, uf: uf }),
     });
+
     const { success } = await res.json();
 
     if (success) {
@@ -62,7 +63,7 @@ export default function Terms() {
             </section>
             <section className="w-2/6" >
               <label className="me-1 font-bold" htmlFor="uf">UF</label>
-              <select className="rounded p-1 cursor-pointer border mb-5" onChange={handleChange} value={info.uf} required id="uf">
+              <select className="rounded p-1 cursor-pointer hover:bg-gray-200 border mb-5" onChange={handleChange} value={info.uf} required id="uf">
                 {states.map((state) => <option value={state} key={state}>{state}</option>)}
               </select>
             </section>
