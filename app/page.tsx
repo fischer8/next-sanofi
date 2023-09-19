@@ -18,7 +18,7 @@ export default function Terms() {
     }));
   };
 
-  const handleSubmit = async (event: React.FormEvent<HTMLElement>) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     const { crm, uf } = info;
 
