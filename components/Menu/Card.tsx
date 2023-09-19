@@ -13,7 +13,7 @@ export default function Card({ cardInfo } : { cardInfo: Info }) {
         <h3 className="text-lg mb-2">
           {cardInfo.title}
        </h3>
-        <Link href={`/${cardInfo.link}`}>
+        <Link href={`/menu/${cardInfo.link}`}>
           <button className="font-bold opacity-95 h-12 bg-purple-700 hover:bg-purple-900 w-5/6 text-white py-1 px-4 rounded">
             <ArrowLongRightIcon className="mx-auto" width={24} />
           </button>

@@ -1,15 +1,14 @@
 "use client"
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image'
-import Cookies from 'js-cookie';
-import verify from '@/components/Api/api';
 import states from '@/components/states';
 import { AuthInfo } from '@/components/types';
 
 export default function Terms() {
   const [info, setInfo] = useState<AuthInfo>({ crm: 0, uf: "AC" });
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
     const { value, id } = event.target;
@@ -19,16 +18,24 @@ export default function Terms() {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const status = await verify(info.uf, info.crm);
-    if (status === "Ativo") {
-      Cookies.set("WebTEV", `${info.crm}-${info.uf}`, { expires: 1 });
-      router.push("/menu");
+  const handleSubmit = async (event: React.FormEvent<HTMLElement>) => {
+    event.preventDefault();
+    const { crm, uf } = info;
+
+    const res = await fetch("/api/auth", {
+      method: "POST",
+      body: JSON.stringify({ crm: crm, uf: uf }),
+    });
+    const { success } = await res.json();
+
+    if (success) {
+      const nextUrl = searchParams.get("next");
+      router.push(nextUrl ?? "/menu");
+      router.refresh();
     } else {
-      alert("CRM ou UF inválido");
+      alert("CRM ou UF inválidos");
     }
-  }
+  };
 
   return (
     <main className="md:min-h-screen text-center text-black md:bg-white md:flex md:items-center md:justify-center">
@@ -51,7 +58,7 @@ export default function Terms() {
           <section className="flex justify-center items-center">
             <section className="w-2/6">
               <label className="me-1 font-bold" htmlFor="crm">CRM</label>
-              <input className="mb-5 border ps-1 w-7/12" required id='crm' type="number" onChange={handleChange} value={info.crm === 0 ? '' : info.crm} />
+              <input min={0} className="mb-5 border ps-1 w-7/12" required id='crm' type="number" onChange={handleChange} value={info.crm === 0 ? '' : info.crm} />
             </section>
             <section className="w-2/6" >
               <label className="me-1 font-bold" htmlFor="uf">UF</label>
