@@ -5,23 +5,20 @@ export default function pdfHeader(risk: { id: number, risk: string }, score: num
   if (risk.id === 0) {
     description = ['Deambulação precoce.']
   }
-  if (risk.id === 1) {
-    description = ['Profilaxia mecânica (CPI).']
-  }
   if (risk.id === 2) {
-    description = ['Profilaxia farmacológica (HNF ou HBPM).']
+    description = ['Para pacientes com baixo risco de TEV, recomenda-se contra', 'o uso de tromboprofilaxia farmacológica ou mecânica']
   }
   if (risk.id === 3) {
-    description = ['Profilaxia farmacológica (HNF ou HBPM).', 'Profilaxia mecânica (CPI ou meias antitrombo).', ' ', 'Pacientes de alto risco submetidos à cirurgia oncológica', 'abdominal e pélvica: estender a profilaxia por 4 semanas.']
+    description = ['Tromboprofilaxia farmacológica com HBPM.', 'HNF (de 12-12h ou 8-8h) ou fondaparina.']
   }
 
   const capriniDescription = [
-    'Este escore foi determinado por um algoritmo desenvolvido', 
-    'pelo Dr. Victor F. Caprini.',
+    'Esse modelo de avaliação, chamado escore de Padua, foi criado',
+    'a partir de uma modificação substancial do modelo de Kucher.',
     ' ',
-    'Para chegar nesse resultado é levado em consideração',
-    'uma série de fatores de risco que podem aumentar a',
-    'probabilidade de uma pessoa desenvolver TVP.',
+    'Assim, com essa reorganização, o modelo compreende todas',
+    'as condições que as diretrizes internacionais recomendam',
+    'para a tromboprofilaxia',
   ]
 
   var doc = new jsPDF();
@@ -39,9 +36,10 @@ export default function pdfHeader(risk: { id: number, risk: string }, score: num
   doc.setFontSize(14);
   doc.text(description, 14, 80);
   doc.setFontSize(16);
-  doc.text('Sobre', 14, 125)
+  doc.text('Sobre', 14, 105)
   doc.setFontSize(13);
-  doc.text(capriniDescription, 14, 135)
-  doc.save(`WebTEV-caprini-${dateTime[0]}`)
+  doc.text(capriniDescription, 14, 115)
+  doc.save(`WebTEV-padua-${dateTime[0]}`)
 }
+
 

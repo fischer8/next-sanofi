@@ -18,7 +18,12 @@ export type ScoreResult = {
   show: (a: boolean) => void;
 }
 
-export type Prop = {
+export type PaduaProp = {
+  handleScore: (a: ScoreObj) => void;
+  score: ScoreObj[];
+}
+
+export type CapriniProp = {
   handleScore: (a: ScoreObj) => void;
   score: ScoreObj[];
   menuPage: number;

@@ -1,9 +1,10 @@
-import React from 'react';
-import questions from './questions';
-import { CapriniProp } from '../types';
 
-export default function CapriniUl({ handleScore, score, menuPage }: CapriniProp) {
-  const allQuestions = questions[menuPage].map(({ id, ask, value }) => {
+import React from 'react';
+import questions from './questions'
+import { PaduaProp } from '../types';
+
+export default function PaduaUl({ handleScore, score }: PaduaProp) {
+  const allQuestions = questions.map(({ id, ask, value }) => {
     const isChecked = score.some((s) => s.id === id);
     return (
       <li className="mb-2 md:hover:bg-purple-100 rounded border flex flex-row justify-between" key={id}>

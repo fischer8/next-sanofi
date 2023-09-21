@@ -1,6 +1,6 @@
 "use client"
 import { useState } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image'
 import states from '@/components/states';
 import { AuthInfo } from '@/components/types';
@@ -8,10 +8,9 @@ import { AuthInfo } from '@/components/types';
 export default function Terms() {
   const [info, setInfo] = useState<AuthInfo>({ crm: 0, uf: "AC" });
   const router = useRouter();
-  const searchParams = useSearchParams();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
-    const { value, id } = event.target;
+    const { id, value } = event.target;
     setInfo((old) => ({
       ...old,
       [id]: value,
@@ -20,19 +19,16 @@ export default function Terms() {
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    const { crm, uf } = info;
 
     const res = await fetch("/api/auth", {
       method: "POST",
-      body: JSON.stringify({ crm: crm, uf: uf }),
+      body: JSON.stringify({ crm: info.crm, uf: info.uf }),
     });
 
     const { success } = await res.json();
 
     if (success) {
-      const nextUrl = searchParams.get("next");
-      router.push(nextUrl ?? "/menu");
-      router.refresh();
+      router.push("/menu");
     } else {
       alert("CRM ou UF inválidos");
     }

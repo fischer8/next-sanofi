@@ -13,30 +13,25 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ success: false });
   }
 
-  if (body.crm && body.uf) {
-    const token = await new SignJWT({
-      crm: body.crm,
-      uf: body.uf,
-    })
-      .setProtectedHeader({ alg: "HS256" })
-      .setIssuedAt()
-      .setExpirationTime("1d")
-      .sign(getJwtSecretKey());
+  const token = await new SignJWT({
+    crm: body.crm,
+    uf: body.uf,
+  }).setProtectedHeader({ alg: "HS256" })
+    .setIssuedAt()
+    .setExpirationTime("1d")
+    .sign(getJwtSecretKey());
 
-    const response = NextResponse.json(
-      { success: true },
-      { status: 200, headers: { "content-type": "application/json" } }
-    );
+  const response = NextResponse.json(
+    { success: true },
+    { status: 200, headers: { "content-type": "application/json" } }
+  );
 
-    response.cookies.set({
-      name: "token",
-      value: token,
-      path: "/",
-      maxAge: 86400,
-    });
+  response.cookies.set({
+    name: "token",
+    value: token,
+    path: "/",
+    maxAge: 86400,
+  });
 
-    return response;
-  }
-
-  return NextResponse.json({ success: false });
+  return response;
 }
