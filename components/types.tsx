@@ -34,6 +34,7 @@ export type Info = {
   img: string,
   link: string,
   title: string,
+  fav?: boolean
 }
 
 export type AuthInfo = {

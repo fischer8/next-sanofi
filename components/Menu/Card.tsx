@@ -1,24 +1,26 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLongRightIcon } from '@heroicons/react/24/outline';
+import { StarIcon } from '@heroicons/react/24/outline';
 import { Info } from '../types';
 
 
-export default function Card({ cardInfo } : { cardInfo: Info }) {
+export default function Card({ cardInfo, handleFav }: { cardInfo: Info, handleFav: (a: number, b: boolean) => void }) {
   return (
-    <section className="border rounded p-3 flex flex-col justify-between text-center items-center">
-      <Image className="h-44 mb-4" src={cardInfo.img} alt={`Image ${cardInfo.id}`} width={250} height={200} />
-      <section className="w-full"> 
-        <h3 className="text-lg mb-2">
+    <section className="relative">
+      <Link href={`/menu/${cardInfo.link}`} className="border-2 mb-2 bg-gray-50 hover:border-purple-300 hover:border-2 rounded p-6 flex justify-between">
+        <h3 className="text-lg">
           {cardInfo.title}
-       </h3>
-        <Link href={`/menu/${cardInfo.link}`}>
-          <button className="font-bold opacity-95 h-12 bg-purple-700 hover:bg-purple-900 w-5/6 text-white py-1 px-4 rounded">
-            <ArrowLongRightIcon className="mx-auto" width={24} />
-          </button>
-        </Link>
-      </section>
+        </h3>
+      </Link>
+      {cardInfo.fav ?
+        <button onClick={() => handleFav(cardInfo.id, false)} className="absolute z-10 top-3 right-2">
+          <StarIcon fill="yellow" className="mx-auto text-gray-300 hover:text-gray-600 w-[36px] md:w-[26px]" width={26} />
+        </button>
+        :
+        <button onClick={() => handleFav(cardInfo.id, true)} className="absolute z-10 top-3 right-2">
+          <StarIcon fill="white" className="mx-auto text-gray-300 hover:text-gray-600 w-[36px] md:w-[26px]" width={26} />
+        </button>
+      }
     </section>
   );
 }

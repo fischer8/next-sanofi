@@ -12,14 +12,14 @@ export default function CapriniModal({ score, show }: ScoreResult) {
     risk = { id: 0, risk: 'Risco Muito Baixo' };
   }
   return (
-      <section className="absolute top-0 bottom-0 w-full md:border rounded md:mx-auto bg-white flex flex-col items-center justify-center">
-        <h2 className="font-bold text-2xl md:text-base mt-5 pb-2 md:pb-0">
+      <section className="absolute top-0 p-4 bottom-0 w-full md:border rounded md:mx-auto bg-white flex flex-col items-center justify-center">
+        <h2 className="font-bold text-2xl md:text-base mt-5 pb-2">
           {risk.risk}
         </h2>
         <h2 className="text-base mb-5 md:mb-2">
           Escore: {score}
         </h2>
-        <section className="flex flex-col text-center w-5/6 mb-5">
+        <section className="flex flex-col text-center w-full mb-5">
           <section className="flex flex-col justify-evenly w-full bg-blue-100 border rounded py-2">
             <p className="mb-2 font-bold">{'<1 Risco Muito Baixo'}</p>
             <p className="text-sm">Deambulação precoce</p>
@@ -37,11 +37,11 @@ export default function CapriniModal({ score, show }: ScoreResult) {
             <p className="text-sm">Profilaxia farmacológica (HNF ou HBPM) + profilaxia mecânica (CPI ou meias antitrombo). Pacientes de alto risco submetidos à cirurgia oncológica abdominal e pélvica: estender a profilaxia por 4 semanas</p>
           </section>
         </section>
-        <section className="flex flex-col md:flex-row justify-between w-5/6 lg:w-4/6 mb-5 md:mb-0">
-          <button onClick={() => pdfCaprini(risk, score)} className="bg-purple-500 hover:bg-purple-800 w-full mb-2 md:mb-0 md:w-3/6 md:me-2 text-white py-2 md:py-4 rounded">
+        <section className="flex flex-col md:flex-row justify-between w-5/6 lg:w-full mb-5 md:mb-0">
+          <button onClick={() => pdfCaprini(risk, score)} className="bg-purple-500 hover:bg-purple-800 w-full mb-2 md:mb-0 md:w-3/6 md:me-2 text-white py-3 rounded">
             Gerar PDF
           </button>
-          <button onClick={() => show(false)} className="bg-purple-500 w-full md:w-3/6 hover:bg-purple-800 text-white py-2 md:py-4 rounded">
+          <button onClick={() => show(false)} className="bg-purple-500 w-full md:w-3/6 hover:bg-purple-800 text-white py-3 rounded">
             Fechar
           </button>
         </section>

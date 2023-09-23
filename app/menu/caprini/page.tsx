@@ -34,14 +34,11 @@ export default function Avaliacao() {
   return (
     <main className="text-black absolute w-full top-0 bottom-0 md:relative md:min-h-screen flex justify-center items-center bg-white">
       <Back />
-      <h1 className="hidden  md:p-2 font-bold mb-2 md:mb-0 md:block">
-        Escore de avaliação de risco de Caprini
-      </h1>
       {/*showInfo ? <InfoModal handleShow={setShowInfo} /> : <InfoButton handleShow={setShowInfo} />*/}
       <form onSubmit={handleSubmit} className="flex flex-col justify-evenly bg-white lg:border rounded-lg md:shadow-lg p-4 w-full md:w-[400px] relative items-center">
-      <h1 className="md:p-2 font-bold mb-2 md:mb-0 md:hidden">
-        Escore de avaliação de risco de Caprini
-      </h1>
+        <h1 className="md:p-2 font-bold mb-2 md:mb-0 ">
+          Escore de avaliação de risco de Caprini
+        </h1>
         <legend className="text-center w-full">
         </legend>
         <CapriniUl handleScore={handleScore} score={score} menuPage={menuPage} />
@@ -56,6 +53,26 @@ export default function Avaliacao() {
         <button className="p-2 md:p-3 rounded bg-purple-500 text-white w-full mb-1 hover:bg-purple-700 font-bold" type="submit">Calcular Escore</button>
         {showResult && <CapriniModal score={finalScore} show={setShowResult} />}
       </form>
+      <section className="hidden md:block w-3/12 md:ms-12">
+        <h1 className="font-bold lg:text-2xl mb-2">
+          Escore de avaliação de risco de Caprini
+        </h1>
+        <p className="mb-2">
+          Para pacientes cirúrgicos
+        </p>
+        <p className="mb-5">
+          O Escore de Caprini é uma ferramenta utilizada na avaliação de risco de trombose venosa profunda (TVP) em pacientes submetidos a cirurgias.
+        </p>
+        <p className="mb-5">
+          Este teste não é adequado para pacientes médicos e requer interação presencial entre médico e paciente para coletar informações sobre fatores de risco históricos.
+        </p>
+        <p className="mb-5">
+          Este escore foi validado em diversos tipos de pacientes cirúrgicos, abrangendo cirurgia geral, plástica, vascular, cabeça e pescoço, UTI cirúrgica, entre outros.
+        </p>
+        <p className="mb-5">
+          Essa ferramenta ajuda os profissionais de saúde a identificar pacientes com maior risco de TVP e tomar medidas preventivas adequadas.
+        </p>
+      </section>
     </main>
   );
 }
