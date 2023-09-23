@@ -13,7 +13,7 @@ export default function Avaliacao() {
   const [menuPage, setMenuPage] = useState(0);
   const [finalScore, setFinalScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
-//const [showInfo, setShowInfo] = useState(false);
+  //const [showInfo, setShowInfo] = useState(false);
 
   const handleScore = (rawScore: ScoreObj) => {
     if (score.find((s) => s.id === rawScore.id)) {
@@ -34,15 +34,18 @@ export default function Avaliacao() {
   return (
     <main className="text-black absolute w-full top-0 bottom-0 md:relative md:min-h-screen flex justify-center items-center bg-white">
       <Back />
+      <h1 className="hidden  md:p-2 font-bold mb-2 md:mb-0 md:block">
+        Escore de avaliação de risco de Caprini
+      </h1>
       {/*showInfo ? <InfoModal handleShow={setShowInfo} /> : <InfoButton handleShow={setShowInfo} />*/}
-      <form onSubmit={handleSubmit} className="flex flex-col justify-evenly bg-white lg:border rounded-lg md:shadow-lg p-1 w-full md:p-12 md:w-5/6 lg:w-4/6 max-w-[1200px] items-center">
+      <form onSubmit={handleSubmit} className="flex flex-col justify-evenly bg-white lg:border rounded-lg md:shadow-lg p-4 w-full md:w-[400px] relative items-center">
+      <h1 className="md:p-2 font-bold mb-2 md:mb-0 md:hidden">
+        Escore de avaliação de risco de Caprini
+      </h1>
         <legend className="text-center w-full">
-          <h1 className="md:text-4xl md:p-5 text-base font-bold mb-2 md:mb-0 md:block">
-            Escore de avaliação de risco de Caprini
-          </h1>
         </legend>
         <CapriniUl handleScore={handleScore} score={score} menuPage={menuPage} />
-        <section className="w-5/6 flex flex-row mx-auto justify-between mb-3">
+        <section className="w-full flex flex-row mx-auto justify-between mb-2">
           <button type="button" className="rounded w-3/6 border p-2 md:p-3 me-2 bg-purple-500 hover:bg-purple-800 disabled:bg-purple-200" onClick={() => setMenuPage((page) => page - 1)} disabled={menuPage <= 0}>
             <ArrowLongLeftIcon className="mx-auto text-white" width={24} />
           </button>
@@ -50,9 +53,9 @@ export default function Avaliacao() {
             <ArrowLongRightIcon className="mx-auto text-white" width={24} />
           </button>
         </section>
-        <button className="p-2 md:p-3 rounded bg-purple-500 text-white w-5/6 hover:bg-purple-700 font-bold" type="submit">Calcular Escore</button>
+        <button className="p-2 md:p-3 rounded bg-purple-500 text-white w-full mb-1 hover:bg-purple-700 font-bold" type="submit">Calcular Escore</button>
+        {showResult && <CapriniModal score={finalScore} show={setShowResult} />}
       </form>
-      {showResult && <CapriniModal score={finalScore} show={setShowResult} />}
     </main>
   );
 }

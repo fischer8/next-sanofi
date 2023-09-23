@@ -1,7 +1,6 @@
-
 import React from 'react';
-import questions from './questions'
 import { PaduaProp } from '../types';
+import questions from './questions'
 
 export default function PaduaUl({ handleScore, score }: PaduaProp) {
   const allQuestions = questions.map(({ id, ask, value }) => {

@@ -12,28 +12,27 @@ export default function CapriniModal({ score, show }: ScoreResult) {
     risk = { id: 0, risk: 'Risco Muito Baixo' };
   }
   return (
-    <section className="absolute z-20 top-0 bottom-0 w-full md:bg-opacity-80 flex items-center align-middle md:bg-black">
-      <section className="absolute top-0 bottom-0 md:static w-full md:w-5/6 lg:w-[1200px] md:py-24 md:border rounded md:mx-auto bg-white flex flex-col items-center justify-center">
-        <h2 className="font-bold text-3xl md:text-2x1 lg:text-xl mt-5 pb-5">
+      <section className="absolute top-0 bottom-0 w-full md:border rounded md:mx-auto bg-white flex flex-col items-center justify-center">
+        <h2 className="font-bold text-2xl md:text-base mt-5 pb-2 md:pb-0">
           {risk.risk}
         </h2>
-        <h2 className="text-base mb-5">
+        <h2 className="text-base mb-5 md:mb-2">
           Escore: {score}
         </h2>
-        <section className="flex flex-col lg:flex-row text-center w-5/6 mb-5">
-          <section className="flex flex-col md:me-1 justify-evenly w-full bg-blue-100 border rounded py-2 md:py-5 lg:w-2/6">
+        <section className="flex flex-col text-center w-5/6 mb-5">
+          <section className="flex flex-col justify-evenly w-full bg-blue-100 border rounded py-2">
             <p className="mb-2 font-bold">{'<1 Risco Muito Baixo'}</p>
             <p className="text-sm">Deambulação precoce</p>
           </section>
-          <section className="flex flex-col md:me-1 justify-evenly w-full bg-blue-200 border rounded py-2 md:py-5 lg:w-2/6">
+          <section className="flex flex-col justify-evenly w-full bg-blue-200 border rounded py-2">
             <p className="mb-2 font-bold">1-2 Risco Baixo</p>
             <p className="text-sm">Profilaxia mecânica (CPI)</p>
           </section>
-          <section className="flex flex-col md:me-1 justify-evenly w-full bg-orange-200 border rounded py-2 md:py-5 lg:w-2/6">
+          <section className="flex flex-col justify-evenly w-full bg-orange-200 border rounded py-2">
             <p className="mb-2 font-bold">3-4 Risco Moderado</p>
             <p className="text-sm">Profilaxia farmacológica (HNF ou HBPM)</p>
           </section>
-          <section className="flex flex-col md:me-1 justify-evenly w-full bg-red-200 border rounded p-2 md:py-5 lg:w-2/6">
+          <section className="flex flex-col justify-evenly w-full bg-red-200 border rounded p-5">
             <p className="mb-2 font-bold">≥5 Risco Alto</p>
             <p className="text-sm">Profilaxia farmacológica (HNF ou HBPM) + profilaxia mecânica (CPI ou meias antitrombo). Pacientes de alto risco submetidos à cirurgia oncológica abdominal e pélvica: estender a profilaxia por 4 semanas</p>
           </section>
@@ -47,7 +46,6 @@ export default function CapriniModal({ score, show }: ScoreResult) {
           </button>
         </section>
       </section>
-    </section>
   );
 }
 

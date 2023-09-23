@@ -1,10 +1,9 @@
 "use client"
-import React from 'react';
+import { useState } from 'react';
 import Card from '@/components/Menu/Card';
 import cardInfo from '@/components/Menu/info';
 import InfoButton from '@/components/InfoButton/InfoButton';
 import InfoModal from '@/components/InfoButton/InfoModal';
-import { useState } from 'react';
 
 export default function Menu() {
   const [showInfo, setShowInfo] = useState(false);

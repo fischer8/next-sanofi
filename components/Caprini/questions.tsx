@@ -8,7 +8,7 @@ const a7 = { id: 7, ask: 'Gravidez ou pós-parto (menos de 1 mês)', value: 1 }
 const a8 = { id: 8, ask: 'Doença pulmonar grave incluindo pneumonia (menos de 1 mês)', value: 1 }
 const a9 = { id: 9, ask: 'Edema recorrente de membros inferiores', value: 1 }
 const a10 = { id: 10, ask: 'Infarto agudo do miocárdio', value: 1 }
-const a11 = { id: 11, ask: 'Insulficiência cardíaca congestiva (menos de 1 mês)', value: 1 }
+const a11 = { id: 11, ask: 'Insulficiência cardíaca congestiva (<1 mês)', value: 1 }
 const a12 = { id: 12, ask: 'Doença pulmonar obstrutiva crônica', value: 1 }
 const a13 = { id: 13, ask: 'Perda fetal/Aborto', value: 1 }
 const a14 = { id: 14, ask: 'Uso de anticoncepcional ou terapia de reposição hormonal', value: 1 }
@@ -36,13 +36,13 @@ const a30 = { id: 30, ask: 'Trombocitopenia induzida por heparina', value: 3 }
 const a31 = { id: 31, ask: 'Trombofilia congênita ou adquirida', value: 3 }
 
 //5 pontos
-const a32 = { id: 32, ask: 'Acidente vascular cerebral AVC (menos de 1 mês)', value: 5 }
+const a32 = { id: 32, ask: 'Acidente vascular cerebral AVC (<1 mês)', value: 5 }
 const a33 = { id: 33, ask: 'Artroplatia de membros inferiores', value: 5 }
 const a34 = { id: 34, ask: 'Fratura de pelve, coxa ou perna', value: 5 }
 const a35 = { id: 35, ask: 'Politrauma (menos de 1 mês)', value: 5 }
 const a36 = { id: 36, ask: 'Lesão medular - paralisia (menos de 1 mês)', value: 5 }
 
-const allQuestions = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32, a33, a34, a35, a36];
+const allQuestions = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a25, a15, a16, a17, a18, a19, a20, a21, a22, a23, a24, a14, a26, a27, a28, a29, a30, a31, a32, a33, a34, a35, a36];
 
 const chunk1 = allQuestions.slice(0, 12);
 const chunk2 = allQuestions.slice(12, 24);
