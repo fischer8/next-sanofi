@@ -38,10 +38,10 @@ export default function CapriniModal({ score, show }: ScoreResult) {
           </section>
         </section>
         <section className="flex flex-col md:flex-row justify-between w-5/6 lg:w-full mb-5 md:mb-0">
-          <button onClick={() => pdfCaprini(risk, score)} className="bg-purple-500 hover:bg-purple-800 w-full mb-2 md:mb-0 md:w-3/6 md:me-2 text-white py-3 rounded">
+          <button onClick={() => pdfCaprini(risk, score)} className="bg-purple-500 select-none hover:bg-purple-800 w-full mb-2 md:mb-0 md:w-3/6 md:me-2 text-white py-3 rounded">
             Gerar PDF
           </button>
-          <button onClick={() => show(false)} className="bg-purple-500 w-full md:w-3/6 hover:bg-purple-800 text-white py-3 rounded">
+          <button onClick={() => show(false)} className="bg-purple-500 select-none w-full md:w-3/6 hover:bg-purple-800 text-white py-3 rounded">
             Fechar
           </button>
         </section>
