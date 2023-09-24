@@ -13,7 +13,7 @@ export default function Card({ cardInfo, handleFav }: CardFav) {
           {cardInfo.title}
         </h3>
         <p className="text-gray-500">
-          Calcula o risco de TEV em pacientes cirúrgicos
+          {cardInfo.desc}
         </p>
       </section>
       </Link>

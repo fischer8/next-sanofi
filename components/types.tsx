@@ -39,6 +39,7 @@ export type Info = {
   img: string,
   link: string,
   title: string,
+  desc: string,
   fav?: boolean
 }
 
