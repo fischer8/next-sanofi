@@ -4,9 +4,8 @@ import { ShowInfo } from '../types';
 
 export default function InfoButton({ handleShow }: ShowInfo) {
   return (
-    <button name='informação' onClick={() => handleShow(true)} className="hidden md:block text-sm absolute text-center right-10 top-10">
-     <InformationCircleIcon width={60} className="mx-auto" />
-      Informação
+    <button name='informação' onClick={() => handleShow(true)} className="hidden md:block">
+      <InformationCircleIcon width={44} className="mx-auto text-gray-800" />
     </button>
   );
 }

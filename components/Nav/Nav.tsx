@@ -1,36 +1,38 @@
 "use client"
 import React, { useState } from 'react';
 import Image from 'next/image';
+import InfoButton from '@/components/InfoButton/InfoButton';
+import InfoModal from '@/components/InfoButton/InfoModal';
 
 export default function Nav({ title }: { title: string }) {
   const [showNav, setShowNav] = useState(false);
+  const [showInfo, setShowInfo] = useState(false);
+
   return (
     <section>
-      <section className="bg-purple-300 flex items-center md:p-2 md:ps-4 md:pe-6 absolute z-20 top-0 w-full">
-        <button onClick={() => setShowNav((old) => !old)} className="absolute z-20">
+      <section className="bg-purple-300 flex justify-between items-center p-4 md:ps-4 md:pe-4 absolute top-0 z-50 w-full">
+        <button onClick={() => setShowNav((old) => !old)} className="hidden md:block">
           <Image
-            className="hidden md:block z-20"
             src="/hamb_icon.webp"
-            width={50}
+            width={40}
             height={50}
             alt="Menu"
             placeholder="blur"
             blurDataURL="/hamb_icon.webp"
           />
         </button>
-        <h1 className="select-none p-4 text-center mx-auto">
+        <h1 className="select-none font-bold md:text-2xl mx-auto md:mx-0 text-center">
           {title}
         </h1>
+      {showInfo ? <InfoModal handleShow={setShowInfo} /> : <InfoButton handleShow={setShowInfo} />}
       </section>
       {showNav &&
-        <nav className="absolute hidden align-middle md:block z-10 left-0 top-0 bottom-0 right-[60%] lg:right-[70%] border bg-purple-100">
-          <section className="my-auto mx-auto border-red-600 flex flex-col align-middle items-center">
-            <p className="">
-              oi
-              dadskngjdfkgjkfsdngjkdsfnvkjndfsvkjnfdkj
-              dfjgk fegjkergjkrejgerjgrwejkn rjkehjgk hrjehjh ejk hẃ jhwj hgwje k d mgdna ẽjranf jernij nfaj rnfeo gfne[w]oi jgqeiqjigqjrengqiernghdiojfkf adsk hj asd hjsd hdsj hdsj hj sh dhsj hdsj hsj hdsj hdsj hdsh
-            </p>
-          </section>
+        <nav className="fixed hidden md:flex items-center z-10 left-0 top-0 bottom-0 right-[70%] lg:right-[80%] border bg-purple-100">
+          <p className="w-full border">
+            oi
+            dadskngjdfkgjkfsdngjkdsfnvkjndfsvkjnfdkj
+            dfjgk fegjkergjkrejgerjgrwejkn rjkehjgk hrjehjh ejk hẃ jhwj hgwje k d mgdna ẽjranf jernij nfaj rnfeo gfne[w]oi jgqeiqjigqjrengqiernghdiojfkf adsk hj asd hjsd hdsj hdsj hj sh dhsj hdsj hsj hdsj hdsj hdsh
+          </p>
         </nav>
       }
     </section>
