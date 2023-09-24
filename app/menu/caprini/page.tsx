@@ -38,22 +38,7 @@ export default function Avaliacao() {
       <Nav title={text} />
       <main className="text-black absolute md:mt-36 w-full top-0 bottom-0 flex justify-center bg-white">
         {/*showInfo ? <InfoModal handleShow={setShowInfo} /> : <InfoButton handleShow={setShowInfo} />*/}
-        <form onSubmit={handleSubmit} className="flex flex-col justify-center md:justify-evenly bg-white md:border rounded-lg md:shadow-lg p-4 w-full md:w-[400px] relative items-center">
-          <legend className="text-center w-full">
-          </legend>
-          <CapriniUl handleScore={handleScore} score={score} menuPage={menuPage} />
-          <section className="w-full flex flex-row mx-auto justify-between mb-2">
-            <button type="button" className="rounded w-3/6 border select-none p-2 md:p-3 me-2 bg-purple-500 hover:bg-purple-800 disabled:bg-purple-200" onClick={() => setMenuPage((page) => page - 1)} disabled={menuPage <= 0}>
-              <ArrowLongLeftIcon className="mx-auto select-none text-white" width={24} />
-            </button>
-            <button type="button" className="rounded w-3/6 p-2 select-none md:p-3 border bg-purple-500 hover:bg-purple-800 disabled:bg-purple-200" onClick={() => setMenuPage((page) => page + 1)} disabled={menuPage >= 2}>
-              <ArrowLongRightIcon className="mx-auto select-none text-white" width={24} />
-            </button>
-          </section>
-          <button className="p-2 select-none md:p-3 rounded bg-purple-500 text-white w-full mb-1 hover:bg-purple-700 font-bold" type="submit">Calcular Escore</button>
-          {showResult && <CapriniModal score={finalScore} show={setShowResult} />}
-        </form>
-        <section className="hidden md:block w-3/12 md:ms-12">
+        <section className="hidden md:block w-3/12 md:me-12">
           <h1 className="font-bold mb-2">
             Para pacientes cirúrgicos
           </h1>
@@ -70,6 +55,19 @@ export default function Avaliacao() {
             Essa ferramenta ajuda os profissionais de saúde a identificar pacientes com maior risco de TVP e tomar medidas preventivas adequadas.
           </p>
         </section>
+        <form onSubmit={handleSubmit} className="flex flex-col justify-center md:justify-evenly bg-white md:border rounded-lg md:shadow-lg p-4 w-full md:w-[400px] relative mt-14 md:mt-0 h-fit items-center">
+          <CapriniUl handleScore={handleScore} score={score} menuPage={menuPage} />
+          <section className="w-full flex flex-row mx-auto justify-between mb-2">
+            <button type="button" className="rounded w-3/6 border select-none p-2 md:p-3 me-2 bg-purple-500 hover:bg-purple-800 disabled:bg-purple-200" onClick={() => setMenuPage((page) => page - 1)} disabled={menuPage <= 0}>
+              <ArrowLongLeftIcon className="mx-auto select-none text-white" width={24} />
+            </button>
+            <button type="button" className="rounded w-3/6 p-2 select-none md:p-3 border bg-purple-500 hover:bg-purple-800 disabled:bg-purple-200" onClick={() => setMenuPage((page) => page + 1)} disabled={menuPage >= 2}>
+              <ArrowLongRightIcon className="mx-auto select-none text-white" width={24} />
+            </button>
+          </section>
+          <button className="p-2 select-none md:p-3 rounded bg-purple-500 text-white w-full mb-1 hover:bg-purple-700 font-bold" type="submit">Calcular Escore</button>
+          {showResult && <CapriniModal score={finalScore} show={setShowResult} />}
+        </form>
       </main>
     </main>
   );

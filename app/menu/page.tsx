@@ -26,7 +26,7 @@ export default function Menu() {
   return (
     <section className="text-center text-black min-h-screen flex items-center bg-white">
       <Nav title={'WebTEV'}/>
-      <section className="flex mx-auto flex-col w-11/12 lg:w-5/12">
+      <section className="flex mx-auto flex-col w-11/12 lg:w-4/6 lg:px-2">
         {cards.map((info) => <Card cardInfo={info} handleFav={handleFavorites} key={info.id} />)}
       </section>
     </section>
