@@ -29,6 +29,11 @@ export type CapriniProp = {
   menuPage: number;
 }
 
+export type CardFav = {
+  cardInfo: Info;
+  handleFav: (a: number, b: boolean) => void;
+}
+
 export type Info = {
   id: number,
   img: string,

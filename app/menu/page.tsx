@@ -28,7 +28,7 @@ export default function Menu() {
   return (
     <section className="text-center text-black min-h-screen bg-white">
       {showInfo ? <InfoModal handleShow={setShowInfo} /> : <InfoButton handleShow={setShowInfo} />}
-      <h1 className="text-2xl lg:pt-20 md:text-4xl md:mt-6 font-bold mb-2 mx-auto md:mb-8 mt-6 md:text-4x1 p-5">
+      <h1 className="text-2xl lg:pt-20 md:text-4xl md:mt-0 font-bold mb-2 mx-auto md:mb-8 mt-6 md:text-4x1 p-5">
         Profilaxia e tratamento da TEV
       </h1>
       <section className="flex mx-auto flex-col w-11/12 lg:w-5/12">

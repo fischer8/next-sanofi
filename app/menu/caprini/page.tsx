@@ -35,7 +35,7 @@ export default function Avaliacao() {
     <main className="text-black absolute w-full top-0 bottom-0 md:relative md:min-h-screen flex justify-center items-center bg-white">
       <Back />
       {/*showInfo ? <InfoModal handleShow={setShowInfo} /> : <InfoButton handleShow={setShowInfo} />*/}
-      <form onSubmit={handleSubmit} className="flex flex-col justify-evenly bg-white lg:border rounded-lg md:shadow-lg p-4 w-full md:w-[400px] relative items-center">
+      <form onSubmit={handleSubmit} className="flex flex-col justify-evenly bg-white md:border rounded-lg md:shadow-lg p-4 w-full md:w-[400px] relative items-center">
         <h1 className="md:p-2 font-bold mb-2 md:mb-0 ">
           Escore de avaliação de risco de Caprini
         </h1>
