@@ -1,7 +1,7 @@
 import { jwtVerify } from "jose";
 
 export function getJwtSecretKey() {
-  return new TextEncoder().encode(process.env.NEXT_PUBLIC_JWT_SECRET_KEY);
+  return new TextEncoder().encode(process.env.NEXT_JWT_SECRET);
 }
 
 export async function verifyJwtToken(token: string) {

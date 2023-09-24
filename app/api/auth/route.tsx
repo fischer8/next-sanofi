@@ -4,7 +4,7 @@ import { getJwtSecretKey } from "@/components/Auth/JWT";
 
 export async function POST(request: NextRequest) {
   const body = await request.json();
-  const url = `${process.env.NEXT_PUBLIC_ENDPOINT}${body.uf}&q=${body.crm}${process.env.NEXT_PUBLIC_API_KEY}`;
+  const url = `${process.env.NEXT_ENDPOINT}${body.uf}&q=${body.crm}${process.env.NEXT_API_KEY}`;
   const auth = await fetch(url)
     .then(response => response.json())
     .then(data => data.item[0]?.situacao)
