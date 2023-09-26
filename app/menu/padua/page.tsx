@@ -2,8 +2,8 @@
 import { useState } from 'react';
 import Nav from '@/components/Nav/Nav';
 import PaduaUl from '@/components/Padua/PaduaUl';
+import PaduaModal from '@/components/Padua/PaduaModal';
 import { ScoreObj } from '@/components/types';
-import { ArrowLongLeftIcon, ArrowLongRightIcon } from '@heroicons/react/24/outline';
 import Back from '@/components/Back';
 import Footer from '@/components/Footer/Footer';
 
@@ -66,7 +66,7 @@ export default function Avaliacao() {
             </legend>
             <PaduaUl handleScore={handleScore} score={score} />
             <button className="p-2 select-none md:p-3 rounded bg-purple-500 text-white w-full mb-1 hover:bg-purple-700 font-bold" type="submit">Calcular Escore</button>
-            {showResult && <CapriniModal score={finalScore} show={handleShow} />}
+            {showResult && <PaduaModal score={finalScore} show={handleShow} />}
           </form>
         </section>
         <Footer />
