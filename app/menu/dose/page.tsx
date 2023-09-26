@@ -4,7 +4,7 @@ import Nav from '@/components/Nav/Nav';
 export default function Dose() {
   return (
     <main>
-      <Nav />
+      <Nav pageName="Dose" />
     </main>
   );
 }
