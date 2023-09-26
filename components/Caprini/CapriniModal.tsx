@@ -19,21 +19,21 @@ export default function CapriniModal({ score, show }: ScoreResult) {
         <h2 className="text-base mb-5 md:mb-2">
           Escore: {score}
         </h2>
-        <section className="flex flex-col text-center w-full mb-5">
+        <section className="flex flex-col text-center w-full mb-2">
           <section className="flex flex-col justify-evenly w-full bg-blue-100 border rounded py-2">
-            <p className="mb-2 font-bold">{'<1 Risco Muito Baixo'}</p>
+            <p className="mb-1 ont-bold">{'<1 Risco Muito Baixo'}</p>
             <p className="text-sm">Deambulação precoce</p>
           </section>
           <section className="flex flex-col justify-evenly w-full bg-blue-200 border rounded py-2">
-            <p className="mb-2 font-bold">1-2 Risco Baixo</p>
+            <p className="mb-1 font-bold">1-2 Risco Baixo</p>
             <p className="text-sm">Profilaxia mecânica (CPI)</p>
           </section>
           <section className="flex flex-col justify-evenly w-full bg-orange-200 border rounded py-2">
-            <p className="mb-2 font-bold">3-4 Risco Moderado</p>
+            <p className="mb-1 font-bold">3-4 Risco Moderado</p>
             <p className="text-sm">Profilaxia farmacológica (HNF ou HBPM)</p>
           </section>
-          <section className="flex flex-col justify-evenly w-full bg-red-200 border rounded p-5">
-            <p className="mb-2 font-bold">≥5 Risco Alto</p>
+          <section className="flex flex-col justify-evenly w-full bg-red-200 border rounded p-2">
+            <p className="mb-1 font-bold">≥5 Risco Alto</p>
             <p className="text-sm">Profilaxia farmacológica (HNF ou HBPM) + profilaxia mecânica (CPI ou meias antitrombo). Pacientes de alto risco submetidos à cirurgia oncológica abdominal e pélvica: estender a profilaxia por 4 semanas</p>
           </section>
         </section>

@@ -7,9 +7,9 @@ export async function POST(request: NextRequest) {
   const url = `${process.env.NEXT_ENDPOINT}${body.uf}&q=${body.crm}${process.env.NEXT_API_KEY}`;
   const auth = await fetch(url)
     .then(response => response.json())
-    .then(data => data.item[0]?.situacao)
+    .then(data => data.item[0])
 
-  if (auth !== "Ativo") {
+  if (auth.situacao !== "Ativo") {
     return NextResponse.json({ success: false });
   }
 
@@ -29,6 +29,13 @@ export async function POST(request: NextRequest) {
   response.cookies.set({
     name: "token",
     value: token,
+    path: "/",
+    maxAge: 86400,
+  });
+
+  response.cookies.set({
+    name: "data",
+    value: JSON.stringify({ name: auth.nome, crm: body.crm }),
     path: "/",
     maxAge: 86400,
   });
