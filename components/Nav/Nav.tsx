@@ -7,7 +7,7 @@ import cardInfo from '../Menu/info';
 import Link from 'next/link';
 import Cookies from 'js-cookie';
 
-export default function Nav({ title }: { title: string }) {
+export default function Nav() {
   const [showNav, setShowNav] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
   const hasData = Cookies.get('data');
@@ -17,7 +17,7 @@ export default function Nav({ title }: { title: string }) {
   return (
   <section>
     <section className="hidden md:block">
-      {!showInfo && <section className="bg-purple-400 p-4 md:ps-4 md:pe-4 absolute top-0 z-50 w-full">
+      {!showInfo && <section className="bg-purple-400 p-4 md:ps-4 md:pe-4 fixed top-0 z-50 w-full">
         <section className="flex justify-between items-center">
           <button onClick={() => setShowNav((old) => !old)} className="hidden md:block">
             <Image
@@ -31,7 +31,7 @@ export default function Nav({ title }: { title: string }) {
           </button>
           <section className="mx-auto md:mx-0">
             <h1 className="select-none md:text-2xl text-center">
-              {title}
+              WebTEV
             </h1>
           </section>
           <InfoButton handleShow={setShowInfo} />

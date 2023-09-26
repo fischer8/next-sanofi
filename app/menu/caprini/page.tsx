@@ -6,6 +6,7 @@ import CapriniModal from '@/components/Caprini/CapriniModal';
 import { ScoreObj } from '@/components/types';
 import { ArrowLongLeftIcon, ArrowLongRightIcon } from '@heroicons/react/24/outline';
 import Back from '@/components/Back';
+import Footer from '@/components/Footer/Footer';
 
 export default function Avaliacao() {
   const [score, setScore] = useState<ScoreObj[]>([]);
@@ -34,10 +35,13 @@ export default function Avaliacao() {
   return (
     <main>
       <Nav title={text} />
-      <section className="text-black px-2 absolute md:mt-26 w-full pt-8 top-0 bottom-0 bg-white">
-        <section className="flex items-center md:mt-[70px] h-max justify-center mx-auto">
+      <section className="text-black absolute md:mt-26 w-full pt-8 top-0 bottom-0 bg-white">
+        <section className="flex md:mt-[70px] items-center h-max justify-center mx-auto">
           <section className="hidden md:block w-[400px] me-6 lg:me-12">
-            <h1 className="font-bold text-2xl mb-2">
+            <h1 className="font-bold text-2xl mb-4">
+              Escore de Caprini
+            </h1>
+            <h1 className="font-bold mb-2">
               Para pacientes cirúrgicos
             </h1>
             <p className="mb-5">
@@ -71,6 +75,7 @@ export default function Avaliacao() {
             {showResult && <CapriniModal score={finalScore} show={setShowResult} />}
           </form>
         </section>
+        <Footer />
       </section>
     </main>
   );
