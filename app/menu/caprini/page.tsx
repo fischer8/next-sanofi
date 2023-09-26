@@ -32,6 +32,7 @@ export default function Avaliacao() {
 
   const handleShow = () => {
     setScore([])
+    setMenuPage(0)
     setShowResult(false)
   }
 
