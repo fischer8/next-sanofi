@@ -30,6 +30,11 @@ export default function Avaliacao() {
     setShowResult(true);
   }
 
+  const handleShow = () => {
+    setScore([])
+    setShowResult(false)
+  }
+
   return (
     <main>
       <Nav />
@@ -71,7 +76,7 @@ export default function Avaliacao() {
               </button>
             </section>
             <button className="p-2 select-none md:p-3 rounded bg-purple-500 text-white w-full mb-1 hover:bg-purple-700 font-bold" type="submit">Calcular Escore</button>
-            {showResult && <CapriniModal score={finalScore} show={setShowResult} />}
+            {showResult && <CapriniModal score={finalScore} show={handleShow} />}
           </form>
         </section>
         <Footer />
