@@ -33,6 +33,7 @@ export default function Avaliacao() {
   return (
     <main>
       <Nav />
+      <Back/ >
       <section className="text-black absolute md:mt-26 w-full pt-10 top-0 bottom-0 bg-white">
         <section className="flex md:mt-[70px] items-center justify-center mx-auto">
           <section className="hidden md:block w-[400px] me-6 lg:me-12">
