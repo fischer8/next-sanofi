@@ -19,11 +19,11 @@ export default function Card({ cardInfo, handleFav }: CardFav) {
       </Link>
       {cardInfo.fav ?
         <button onClick={() => handleFav(cardInfo.id, false)} className="absolute z-10 top-2 right-2">
-          <StarIcon className="mx-auto fill-purple-600 text-black opacity-50 hover:opacity-100 w-[36px] md:w-[26px]" width={26} />
+          <StarIcon className="mx-auto fill-purple-600 text-black opacity-50 md:hover:opacity-100 w-[36px] md:w-[26px]" width={26} />
         </button>
         :
         <button onClick={() => handleFav(cardInfo.id, true)} className="absolute z-10 top-2 right-2">
-          <StarIcon className="mx-auto text-gray-300 hover:text-purple-600 w-[36px] md:w-[26px]" width={26} />
+          <StarIcon className="mx-auto text-gray-300 md:hover:text-purple-600 w-[36px] md:w-[26px]" width={26} />
         </button>
       }
     </section>

@@ -47,7 +47,7 @@ export default function Nav() {
               {`CRM: ${data.crm}`}
             </h3>
           </section>
-          {cardInfo.map((inf) => <Link className="p-5 select-none text-start w-full transition-colors bg-purple-400 mb-[1px] hover:bg-purple-300" key={inf.id} href={inf.link}>{inf.title}</Link>)}
+          {cardInfo.map((inf) => <Link className="p-5 select-none text-start w-full transition-colors bg-purple-400 mb-[1px] hover:bg-purple-300" key={inf.id} href={`/menu/${inf.link}`}>{inf.title}</Link>)}
         </nav>
       }
       {showInfo && <InfoModal handleShow={setShowInfo} />}

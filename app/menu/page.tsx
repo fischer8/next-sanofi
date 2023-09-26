@@ -25,12 +25,12 @@ export default function Menu() {
 
 
   return (
-    <section className="text-center text-black min-h-screen flex items-center bg-white">
+    <section className="text-center text-black min-h-screen md:flex items-center bg-white">
       <Nav />
+      <h1 className="text-2xl mb-4 md:hidden">
+        WebTEV
+      </h1>
       <section className="flex mx-auto flex-col w-11/12 lg:w-4/6 lg:px-2">
-        <h1 className="text-2xl mb-4 md:hidden">
-          WebTEV
-        </h1>
         {cards.map((info) => <Card cardInfo={info} handleFav={handleFavorites} key={info.id} />)}
       </section>
       <Footer />

@@ -8,7 +8,7 @@ export default function PaduaModal({ score, show }: ScoreResult) {
     risk = { id: 3, risk: 'Risco Alto' };
   } else if (score > 2) {
     risk = { id: 2, risk: 'Risco Baixo' };
-  }
+  } 
 
   return (
     <section className="absolute z-20 top-0 bottom-0 w-full md:bg-opacity-80 flex items-center align-middle md:bg-black">
