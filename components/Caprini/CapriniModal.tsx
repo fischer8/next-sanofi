@@ -13,7 +13,7 @@ export default function CapriniModal({ score, show }: ScoreResult) {
   }
   return (
     <section className="absolute z-50 top-0 p-4 bottom-0 w-full md:border rounded bg-white flex flex-col items-center justify-center">
-      <h2 className="font-bold text-2xl md:text-base mt-5 pb-2">
+      <h2 className="font-bold text-2xl mt-5 pb-2">
         {risk.risk}
       </h2>
       <h2 className="text-base mb-5 md:mb-2">
