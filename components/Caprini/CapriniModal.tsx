@@ -21,7 +21,7 @@ export default function CapriniModal({ score, show }: ScoreResult) {
       </h2>
       <section className="flex flex-col text-center w-full mb-2">
         <section className="flex flex-col justify-evenly w-full bg-blue-100 border rounded py-2">
-          <p className="mb-1 ont-bold">{'<1 Risco Muito Baixo'}</p>
+          <p className="mb-1 font-bold">{'<1 Risco Muito Baixo'}</p>
           <p className="text-sm">Deambulação precoce</p>
         </section>
         <section className="flex flex-col justify-evenly w-full bg-blue-200 border rounded py-2">

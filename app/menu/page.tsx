@@ -25,9 +25,9 @@ export default function Menu() {
 
 
   return (
-    <section className="text-center text-black min-h-screen md:flex items-center bg-white">
-      <Nav />
-      <h1 className="text-2xl mb-4 md:hidden">
+    <section className="text-center text-black md:min-h-screen md:flex items-center bg-white">
+      <Nav pageName="" />
+      <h1 className="text-2xl mt-8 mb-6 md:hidden">
         WebTEV
       </h1>
       <section className="flex mx-auto flex-col w-11/12 lg:w-4/6 lg:px-2">
