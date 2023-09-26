@@ -5,7 +5,6 @@ import PaduaUl from '@/components/Padua/PaduaUl';
 import PaduaModal from '@/components/Padua/PaduaModal';
 import { ScoreObj } from '@/components/types';
 import Back from '@/components/Back';
-import Footer from '@/components/Footer/Footer';
 
 export default function Avaliacao() {
   const [score, setScore] = useState<ScoreObj[]>([]);
@@ -69,7 +68,6 @@ export default function Avaliacao() {
             {showResult && <PaduaModal score={finalScore} show={handleShow} />}
           </form>
         </section>
-        <Footer />
       </section>
     </main>
   );

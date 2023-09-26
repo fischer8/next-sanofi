@@ -4,6 +4,7 @@ import Image from 'next/image';
 import InfoButton from '@/components/InfoButton/InfoButton';
 import InfoModal from '@/components/InfoButton/InfoModal';
 import cardInfo from '../Menu/info';
+import Footer from '../Footer/Footer';
 import Link from 'next/link';
 import Cookies from 'js-cookie';
 
@@ -64,6 +65,7 @@ export default function Nav({ pageName }: { pageName: string }) {
           </section>
         </section>
       }
+      <Footer />
     </section>
   );
 }

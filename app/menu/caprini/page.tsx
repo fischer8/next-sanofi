@@ -6,7 +6,6 @@ import CapriniModal from '@/components/Caprini/CapriniModal';
 import { ScoreObj } from '@/components/types';
 import { ArrowLongLeftIcon, ArrowLongRightIcon } from '@heroicons/react/24/outline';
 import Back from '@/components/Back';
-import Footer from '@/components/Footer/Footer';
 
 export default function Avaliacao() {
   const [score, setScore] = useState<ScoreObj[]>([]);
@@ -80,7 +79,6 @@ export default function Avaliacao() {
             {showResult && <CapriniModal score={finalScore} show={handleShow} />}
           </form>
         </section>
-        <Footer />
       </section>
     </main>
   );
