@@ -39,7 +39,7 @@ export default function Nav() {
       </section>}
       {(showNav && !showInfo) &&
         <nav className="fixed hidden md:flex flex-col justify-center z-10 left-0 top-0 bottom-0 md:w-[350px] bg-purple-500">
-          <section className="p-10 transition-colors duration-200 mb-2 bg-purple-400 hover:bg-purple-300 w-full text-start">
+          <section className="p-6 transition-colors duration-200 mb-2 bg-purple-400 hover:bg-purple-300 w-full text-start">
             <p className="mb-2">
               {data.name}
             </p>
