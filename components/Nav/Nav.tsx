@@ -15,6 +15,7 @@ export default function Nav({ title }: { title: string }) {
   const data = hasData && JSON.parse(hasData)
 
   return (
+  <section>
     <section className="hidden md:block">
       {!showInfo && <section className="bg-purple-400 p-4 md:ps-4 md:pe-4 absolute top-0 z-50 w-full">
         <section className="flex justify-between items-center">
@@ -52,6 +53,7 @@ export default function Nav({ title }: { title: string }) {
       }
       {showInfo && <InfoModal handleShow={setShowInfo} />}
     </section>
+  </section>
   );
 }
 

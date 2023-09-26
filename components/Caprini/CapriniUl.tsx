@@ -8,7 +8,7 @@ export default function CapriniUl({ handleScore, score, menuPage }: CapriniProp)
     return (
       <li className="mb-1 md:hover:bg-purple-100 rounded border flex flex-row justify-between" key={id}>
         <input onChange={() => handleScore({ id, value })} className="appearance-none rounded-l border w-1/12 cursor-pointer me-px md:me-2 checked:bg-purple-500" checked={isChecked} id={`inp-${id}`} type="checkbox" />
-        <label className="cursor-pointer p-1 md:p-0 select-none rounded text-gray-600 inline-block w-11/12 text-sm " htmlFor={`inp-${id}`}>{ask}</label>
+        <label className="p-1 cursor-pointer select-none rounded text-gray-600 inline-block w-11/12 text-sm " htmlFor={`inp-${id}`}>{ask}</label>
       </li>
     )
   })
