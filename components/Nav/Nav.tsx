@@ -30,7 +30,7 @@ export default function Nav() {
             />
           </button>
           <section className="mx-auto md:mx-0">
-            <h1 className="select-none md:text-2xl text-center">
+            <h1 className="select-none cursor-pointer md:text-2xl text-center">
               WebTEV
             </h1>
           </section>
@@ -39,7 +39,7 @@ export default function Nav() {
       </section>}
       {(showNav && !showInfo) &&
         <nav className="fixed hidden md:flex flex-col justify-center z-10 left-0 top-0 bottom-0 md:w-[350px] bg-purple-500">
-          <section className="p-6 transition-colors duration-200 mb-2 bg-purple-400 hover:bg-purple-300 w-full text-start">
+          <section className="p-6 cursor-pointer select-none transition-colors duration-200 mb-2 bg-purple-400 hover:bg-purple-300 w-full text-start">
             <p className="mb-2">
               {data.name}
             </p>
@@ -47,8 +47,7 @@ export default function Nav() {
               {`CRM: ${data.crm}`}
             </h3>
           </section>
-          <Link className="p-5 text-start w-full transition-colors bg-purple-400 mb-[1px] hover:bg-purple-300" href="/menu">Menu</Link>
-          {cardInfo.map((inf) => <Link className="p-5 text-start w-full transition-colors bg-purple-400 mb-[1px] hover:bg-purple-300" key={inf.id} href={inf.link}>{inf.title}</Link>)}
+          {cardInfo.map((inf) => <Link className="p-5 select-none text-start w-full transition-colors bg-purple-400 mb-[1px] hover:bg-purple-300" key={inf.id} href={inf.link}>{inf.title}</Link>)}
         </nav>
       }
       {showInfo && <InfoModal handleShow={setShowInfo} />}

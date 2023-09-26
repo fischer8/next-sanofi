@@ -14,8 +14,6 @@ export default function Avaliacao() {
   const [finalScore, setFinalScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
 
-  const text = 'Escore de avaliação de risco de Caprini'
-
   const handleScore = (rawScore: ScoreObj) => {
     if (score.find((s) => s.id === rawScore.id)) {
       return setScore((old) => old.filter((s) => s.id !== rawScore.id));
@@ -34,9 +32,9 @@ export default function Avaliacao() {
 
   return (
     <main>
-      <Nav title={text} />
-      <section className="text-black absolute md:mt-26 w-full pt-8 top-0 bottom-0 bg-white">
-        <section className="flex md:mt-[70px] items-center h-max justify-center mx-auto">
+      <Nav />
+      <section className="text-black absolute md:mt-26 w-full pt-10 top-0 bottom-0 bg-white">
+        <section className="flex md:mt-[70px] items-center justify-center mx-auto">
           <section className="hidden md:block w-[400px] me-6 lg:me-12">
             <h1 className="font-bold text-2xl mb-4">
               Escore de Caprini
