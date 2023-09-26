@@ -15,7 +15,7 @@ export type ModalCard = {
 
 export type ScoreResult = {
   score: number;
-  show: (a: boolean) => void;
+  show: () => void;
 }
 
 export type PaduaProp = {
