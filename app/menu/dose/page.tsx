@@ -5,6 +5,7 @@ export default function Dose() {
   return (
     <main>
       <Nav pageName="Dose" />
+       
     </main>
   );
 }

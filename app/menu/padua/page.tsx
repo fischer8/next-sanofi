@@ -6,7 +6,7 @@ import PaduaModal from '@/components/Padua/PaduaModal';
 import { ScoreObj } from '@/components/types';
 import Back from '@/components/Back';
 
-export default function Avaliacao() {
+export default function Padua() {
   const [score, setScore] = useState<ScoreObj[]>([]);
   const [finalScore, setFinalScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
@@ -42,17 +42,14 @@ export default function Avaliacao() {
             <h1 className="font-bold text-2xl mb-4">
               Escore de Padua
             </h1>
-            <h1 className="font-bold mb-2">
-              Para pacientes cirúrgicos
-            </h1>
             <p className="mb-5">
-              O Escore de Caprini é uma ferramenta utilizada na avaliação de risco de trombose venosa profunda (TVP) em pacientes submetidos a cirurgias.
+              O escore de Padua pode ser aplicado em pacientes hospitalizados que apresentam risco potencial de TEV.
+              O escore de predição de Pádua identifica pacientes internados que podem apresentar alto risco de tromboembolismo venoso (TEV) e que se beneficiariam de tromboprofilaxia.
             </p>
             <p className="mb-5">
-              Este teste não é adequado para pacientes médicos e requer interação presencial entre médico e paciente para coletar informações sobre fatores de risco históricos.
-            </p>
-            <p className="mb-5">
-              Este escore foi validado em diversos tipos de pacientes cirúrgicos, abrangendo cirurgia geral, plástica, vascular, cabeça e pescoço, UTI cirúrgica, entre outros.
+              A maior parte dos pacientes que desenvolveram TEV tinham câncer ativo.
+              O teste de TEV como acompanhamento é realizado se o paciente for sintomático.
+              Pacientes com contraindicações à profilaxia não foram incluídos no estudo.
             </p>
             <p className="mb-5">
               Essa ferramenta ajuda os profissionais de saúde a identificar pacientes com maior risco de TVP e tomar medidas preventivas adequadas.

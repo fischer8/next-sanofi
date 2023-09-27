@@ -18,7 +18,7 @@ export default function Nav({ pageName }: { pageName: string }) {
   return (
     <section>
       <section className="hidden md:block">
-        {!showInfo && <section className="bg-purple-400 p-4 md:ps-4 md:pe-4 fixed top-0 z-50 w-full">
+        {!showInfo && <section className="bg-purple-400 p-4 md:ps-4 md:pe-4 absolute top-0 z-50 w-full">
           <section className="flex justify-between items-center">
             <button onClick={() => setShowNav((old) => !old)} className="hidden md:block">
               <Image
