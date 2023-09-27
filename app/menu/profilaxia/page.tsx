@@ -73,7 +73,7 @@ export default function Profilaxia() {
                 Enoxaparina 40mg
               </p>
               <p className="mb-4 p-2 py-4 bg-orange-200 w-full rounded-ee text-center">
-              <b>Insulficiência renal<br/> (grave)</b><br/>
+                <b>Insulficiência renal<br /> (grave)</b><br />
                 Enoxaparina 20mg
               </p>
             </section>

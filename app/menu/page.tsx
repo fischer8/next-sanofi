@@ -7,6 +7,7 @@ import Footer from '@/components/Footer/Footer';
 
 export default function Menu() {
   const [cards, setCards] = useState(cardInfo);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const hasCards = localStorage.getItem('cards');
@@ -31,7 +32,7 @@ export default function Menu() {
         WebTEV
       </h1>
       <section className="flex md:mt-[130px] mx-auto flex-col w-11/12 lg:w-[800px] lg:px-2">
-        {cards.map((info) => <Card cardInfo={info} handleFav={handleFavorites} key={info.id} />)}
+        {loading ? 'Carregando...' : cards.map((info) => <Card cardInfo={info} handleFav={handleFavorites} handleLoading={setLoading} key={info.id} />)}
       </section>
       <Footer />
     </section>

@@ -32,6 +32,7 @@ export type CapriniProp = {
 export type CardFav = {
   cardInfo: Info;
   handleFav: (a: number, b: boolean) => void;
+  handleLoading: (b: boolean) => void;
 }
 
 export type Info = {

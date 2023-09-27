@@ -4,10 +4,10 @@ import { StarIcon } from '@heroicons/react/24/outline';
 import { CardFav } from '../types';
 
 
-export default function Card({ cardInfo, handleFav }: CardFav) {
+export default function Card({ cardInfo, handleFav, handleLoading }: CardFav) {
   return (
     <section className="relative">
-      <Link href={`/menu/${cardInfo.link}`} className="border-2 mb-2 bg-gray-50 md:hover:bg-purple-100 md:hover:border-purple-300 rounded p-6 flex justify-between">
+      <Link onClick={() => handleLoading(true)} href={`/menu/${cardInfo.link}`} className="border-2 mb-2 bg-gray-50 md:hover:bg-purple-100 md:hover:border-purple-300 rounded p-6 flex justify-between">
       <section className="text-start">
         <h3 className="select-none text-md">
           {cardInfo.title}
