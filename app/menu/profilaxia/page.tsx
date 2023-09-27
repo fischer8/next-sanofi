@@ -10,9 +10,6 @@ export default function Profilaxia() {
       <section className="text-black absolute md:mt-26 w-full pt-10 top-0 bottom-0 bg-white">
         <section className="flex md:mt-[70px] items-center justify-center mx-auto">
           <section className="md:p-0 md:text-start w-11/12 md:w-[800px]">
-            <h1 className=" md:mt-0 mt-12 text-2xl">
-              Profilaxia da TEV
-            </h1>
             <ul className="mb-12 text-blue-600 underline ">
               <Link className="me-4" href="/menu/profilaxia#caprini">
                 Caprini
