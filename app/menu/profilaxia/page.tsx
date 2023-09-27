@@ -10,7 +10,7 @@ export default function Profilaxia() {
       <section className="text-black absolute md:mt-26 w-full pt-10 top-0 bottom-0 bg-white">
         <section className="flex md:mt-[70px] items-center justify-center mx-auto">
           <section className="md:p-0 md:text-start w-11/12 md:w-[800px]">
-            <ul className="mb-12 text-blue-600 underline ">
+            <ul className="mt-12 mb-4 md:mt-0 text-blue-600 underline ">
               <Link className="me-4" href="/menu/profilaxia#caprini">
                 Caprini
               </Link>
@@ -24,14 +24,39 @@ export default function Profilaxia() {
             <p id="posologia" className="mb-4  text-2xl">
               Posologia
             </p>
-            <section className="flex mb-12">
+            <section className="flex mb-10">
               <section className="flex p-6 text-center flex-col justify-evenly w-full bg-orange-200 border rounded">
                 <p className="mb-1 font-bold">Risco Intermediário</p>
                 <p className="text-sm">HNF 5000UI, SC 2 vezes ao dia / Enoxaparina 20mg, SC 1 vez ao dia / Dalteparina 2500UI, SC 1 vez ao dia</p>
               </section>
               <section className="flex p-6 text-center flex-col justify-evenly w-full bg-red-200 border rounded">
                 <p className="mb-1 font-bold">Risco Alto</p>
-                <p className="text-sm">Risco Intermediário: HNF 5000UI, SC 2 vezes ao dia / Enoxaparina 20mg, SC 1 vez ao dia / Dalteparina 5000UI, SC 1 vez ao dia</p>
+                <p className="text-sm">HNF 5000UI, SC 3 vezes ao dia / Enoxaparina 40mg, SC 1 vez ao dia / Dalteparina 5000UI, SC 1 vez ao dia</p>
+              </section>
+            </section>
+            <p className="mb-4">
+              Tempo de profilaxia recomendado:
+            </p>
+            <section className="flex flex-col md:flex-row text-center w-full mb-12">
+              <section className="flex flex-col px-2 justify-center w-full bg-blue-200 border rounded py-4">
+                <p className="mb-1 font-bold">ATQ e Fratura de quadril</p>
+                <p className="text-sm ">4 a 5 semanas</p>
+              </section>
+              <section className="flex px-6 flex-col justify-evenly w-full bg-blue-200 border rounded py-4">
+                <p className="mb-1 font-bold">ATJ</p>
+                <p className="text-sm ">Pelo menos 10 dias</p>
+              </section>
+              <section className="flex flex-col px-6 justify-evenly w-full bg-blue-200 border rounded py-4">
+                <p className="mb-1 font-bold">Oncológica</p>
+                <p className="text-sm ">3 a 4 semanas</p>
+              </section>
+              <section className="flex flex-col px-6 justify-evenly w-full bg-blue-200 border rounded py-4">
+                <p className="mb-1 font-bold">Politrauma e TRM</p>
+                <p className="text-sm ">Até recuperação</p>
+              </section>
+              <section className="flex flex-col px-6 justify-evenly w-full bg-blue-200 border rounded py-4">
+                <p className="mb-1 font-bold">Demais</p>
+                <p className="text-sm ">7 a 10 dias</p>
               </section>
             </section>
             <p id="caprini" className="text-2xl  mb-5">
@@ -96,12 +121,8 @@ export default function Profilaxia() {
                 <p className="text-sm">Tromboprofilaxia farmacológica com HBPM, HNF (de 12-12h ou 8-8h) ou fondaparina</p>
               </section>
             </section>
-            <section className="mb-[400px]">
+            <section className="mb-[500px]">
             </section>
-
-
-
-
 
           </section>
         </section>
