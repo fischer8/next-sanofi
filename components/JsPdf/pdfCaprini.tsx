@@ -1,6 +1,6 @@
 import { jsPDF } from 'jspdf';
 
-export default function pdfHeader(risk: { id: number, risk: string }, score: number) {
+export default function pdfCaprini(risk: { id: number, risk: string }, score: number) {
   let description: string[] = [];
   if (risk.id === 0) {
     description = ['Deambulação precoce.']
