@@ -33,7 +33,7 @@ export default function Nav({ pageName }: { pageName: string }) {
               </button>
               <section className="mx-auto md:mx-0">
                 <Link href="/menu">
-                  <h1 className="select-none cursor-pointer md:text-2xl text-center">
+                  <h1 className="select-none font-bold cursor-pointer md:text-2xl text-center">
                     WebTEV
                   </h1>
                 </Link>

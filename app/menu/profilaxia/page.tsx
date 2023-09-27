@@ -83,20 +83,20 @@ export default function Profilaxia() {
               Profilaxia baseada no Escore de Padua:
             </h2>
             <section className="flex flex-col md:flex-row text-center w-full mb-2">
-              <section className="flex flex-col px-6 justify-center w-full bg-blue-100 border rounded py-4">
-                <p className="mb-1 font-bold">0-2 Risco muito Baixo</p>
+              <section className="flex flex-col px-2 justify-center w-full bg-blue-100 border rounded py-4">
+                <p className="mb-1 font-bold">Escore 0-2 Risco muito Baixo</p>
                 <p className=" text-sm">Deambulação precoce</p>
               </section>
               <section className="flex px-6 flex-col justify-evenly w-full bg-orange-200 border rounded py-4">
-                <p className="mb-1 font-bold">3 Risco Baixo</p>
+                <p className="mb-1 font-bold">Escore 3 Risco Baixo</p>
                 <p className="text-sm">Para pacientes com baixo risco de TEV, recomenda-se contra o uso de tromboprofilaxia farmacológica ou mecânica</p>
               </section>
               <section className="flex flex-col px-6 justify-evenly w-full bg-red-200 border rounded py-4">
-                <p className="mb-1 font-bold">≥4 Risco Alto</p>
+                <p className="mb-1 font-bold">Escore ≥4 Risco Alto</p>
                 <p className="text-sm">Tromboprofilaxia farmacológica com HBPM, HNF (de 12-12h ou 8-8h) ou fondaparina</p>
               </section>
             </section>
-            <section className="mb-[200px]">
+            <section className="mb-[400px]">
             </section>
 
 

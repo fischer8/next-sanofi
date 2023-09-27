@@ -45,9 +45,6 @@ export default function Avaliacao() {
             <h1 className="font-bold text-2xl mb-4">
               Escore de Caprini
             </h1>
-            <h1 className="font-bold mb-2">
-              Para pacientes cirúrgicos
-            </h1>
             <p className="mb-5">
               O Escore de Caprini é uma ferramenta utilizada na avaliação de risco de trombose venosa profunda (TVP) em pacientes submetidos a cirurgias.
             </p>
