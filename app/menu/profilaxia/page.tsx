@@ -74,20 +74,20 @@ export default function Profilaxia() {
               Profilaxia baseada no Escore de Caprini:
             </h2>
             <section className="flex flex-col mx-auto md:flex-row text-center w-full">
-              <section className="flex md:py-4 flex-col justify-evenly md:justify-center w-full bg-blue-100 border rounded py-2">
+              <section className="flex md:py-4 flex-col justify-evenly md:justify-center w-full bg-blue-100 border rounded py-4">
                 <p className="mb-1 font-bold">{'Escore <1 Risco Muito Baixo'}</p>
                 <p className="text-sm">Deambulação precoce</p>
               </section>
-              <section className="flex flex-col justify-evenly md:justify-center w-full bg-blue-200 border rounded py-2">
+              <section className="flex flex-col justify-evenly md:justify-center w-full bg-blue-200 border rounded py-4">
                 <p className="mb-1 font-bold">Escore 1-2 Risco Baixo</p>
                 <p className="text-sm">Profilaxia mecânica (CPI)</p>
               </section>
-              <section className="flex flex-col md:py-4 justify-evenly md:justify-center w-full bg-orange-200 border rounded py-2">
+              <section className="flex flex-col md:py-4 justify-evenly md:justify-center w-full bg-orange-200 border rounded py-4">
                 <p className="mb-1 font-bold">Escore 3-4 Risco Moderado</p>
                 <p className="text-sm">Profilaxia farmacológica (HNF ou HBPM)</p>
               </section>
             </section>
-            <section className="flex mb-14 md:p-6 md:px-14 text-center flex-col justify-evenly w-full bg-red-200 border rounded p-2">
+            <section className="flex mb-14 px-6 md:px-14 text-center flex-col justify-evenly w-full bg-red-200 border rounded p-4">
               <p className="mb-1 font-bold">Escore ≥5 Risco Alto</p>
               <p className="text-sm">Profilaxia farmacológica (HNF ou HBPM) + profilaxia mecânica (CPI ou meias antitrombo). Pacientes de alto risco submetidos à cirurgia oncológica abdominal e pélvica: estender a profilaxia por 4 semanas</p>
             </section>
