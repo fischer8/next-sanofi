@@ -7,6 +7,7 @@ import { AuthInfo } from '@/components/types';
 
 export default function Terms() {
   const [info, setInfo] = useState<AuthInfo>({ crm: 0, uf: "AC" });
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
@@ -19,6 +20,7 @@ export default function Terms() {
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+    setLoading(true);
 
     const res = await fetch("/api/auth", {
       method: "POST",
@@ -30,6 +32,7 @@ export default function Terms() {
     if (success) {
       router.push("/menu");
     } else {
+      setLoading(false);
       alert("CRM ou UF inválidos");
     }
   };
@@ -64,8 +67,8 @@ export default function Terms() {
               </select>
             </section>
           </section>
-          <button type='submit' className="bg-purple-600 hover:bg-purple-800 text-white py-1 px-10 rounded">
-            Aceitar
+          <button disabled={loading} type='submit' className="bg-purple-600 hover:bg-purple-800 text-white py-1 px-10 rounded">
+            {loading ? 'Carregando...' : 'Aceitar'}
           </button>
         </form>
       </section>

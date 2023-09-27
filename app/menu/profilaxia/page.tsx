@@ -10,24 +10,24 @@ export default function Profilaxia() {
       <section className="text-black absolute md:mt-26 w-full pt-10 top-0 bottom-0 bg-white">
         <section className="flex md:mt-[70px] items-center justify-center mx-auto">
           <section className="md:p-0 md:text-start w-11/12 md:w-[800px]">
-            <h1 className="font-bold md:mt-0 mt-12 text-2xl">
+            <h1 className=" md:mt-0 mt-12 text-2xl">
               Profilaxia da TEV
             </h1>
-            <ul className="mb-12 text-blue-600 underline font-bold">
-              <Link className="me-6" href="/menu/profilaxia#caprini">
+            <ul className="mb-12 text-blue-600 underline ">
+              <Link className="me-4" href="/menu/profilaxia#caprini">
                 Caprini
               </Link>
-              <Link className="me-6" href="/menu/profilaxia#padua">
+              <Link className="me-4" href="/menu/profilaxia#padua">
                 Padua
               </Link>
               <Link href="/menu/profilaxia#posologia">
                 Posologia
               </Link>
             </ul>
-            <p id="posologia" className="mb-4 text-2xl">
+            <p id="posologia" className="mb-4  text-2xl">
               Posologia
             </p>
-            <section className="flex mb-12 ">
+            <section className="flex mb-12">
               <section className="flex p-6 text-center flex-col justify-evenly w-full bg-orange-200 border rounded">
                 <p className="mb-1 font-bold">Risco Intermediário</p>
                 <p className="text-sm">HNF 5000UI, SC 2 vezes ao dia / Enoxaparina 20mg, SC 1 vez ao dia / Dalteparina 2500UI, SC 1 vez ao dia</p>
@@ -37,7 +37,7 @@ export default function Profilaxia() {
                 <p className="text-sm">Risco Intermediário: HNF 5000UI, SC 2 vezes ao dia / Enoxaparina 20mg, SC 1 vez ao dia / Dalteparina 5000UI, SC 1 vez ao dia</p>
               </section>
             </section>
-            <p id="caprini" className="text-2xl mb-4">
+            <p id="caprini" className="text-2xl  mb-5">
               Escore de Caprini
             </p>
             <p className="mb-5">
@@ -53,15 +53,15 @@ export default function Profilaxia() {
             </h2>
             <section className="flex flex-col mx-auto md:flex-row text-center w-full">
               <section className="flex md:py-4 flex-col justify-evenly md:justify-center w-full bg-blue-100 border rounded py-2">
-                <p className="mb-1">{'Escore <1 Risco Muito Baixo'}</p>
+                <p className="mb-1 font-bold">{'Escore <1 Risco Muito Baixo'}</p>
                 <p className="text-sm">Deambulação precoce</p>
               </section>
               <section className="flex flex-col justify-evenly md:justify-center w-full bg-blue-200 border rounded py-2">
-                <p className="mb-1">Escore 1-2 Risco Baixo</p>
+                <p className="mb-1 font-bold">Escore 1-2 Risco Baixo</p>
                 <p className="text-sm">Profilaxia mecânica (CPI)</p>
               </section>
               <section className="flex flex-col md:py-4 justify-evenly md:justify-center w-full bg-orange-200 border rounded py-2">
-                <p className="mb-1">Escore 3-4 Risco Moderado</p>
+                <p className="mb-1 font-bold">Escore 3-4 Risco Moderado</p>
                 <p className="text-sm">Profilaxia farmacológica (HNF ou HBPM)</p>
               </section>
             </section>
@@ -86,7 +86,7 @@ export default function Profilaxia() {
               Profilaxia baseada no Escore de Padua:
             </h2>
             <section className="flex flex-col md:flex-row text-center w-full mb-2">
-              <section className="flex flex-col px-6 justify-evenly w-full bg-blue-100 border rounded py-4">
+              <section className="flex flex-col px-6 justify-center w-full bg-blue-100 border rounded py-4">
                 <p className="mb-1 font-bold">0-2 Risco muito Baixo</p>
                 <p className=" text-sm">Deambulação precoce</p>
               </section>

@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
     uf: body.uf,
   }).setProtectedHeader({ alg: "HS256" })
     .setIssuedAt()
-    .setExpirationTime("1d")
+    .setExpirationTime("7d")
     .sign(getJwtSecretKey());
 
   const response = NextResponse.json(
@@ -30,14 +30,14 @@ export async function POST(request: NextRequest) {
     name: "token",
     value: token,
     path: "/",
-    maxAge: 86400,
+    maxAge: 604800,
   });
 
   response.cookies.set({
     name: "data",
     value: JSON.stringify({ name: auth.nome, crm: body.crm }),
     path: "/",
-    maxAge: 86400,
+    maxAge: 604800,
   });
 
   return response;

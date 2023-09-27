@@ -9,21 +9,21 @@ export default function Card({ cardInfo, handleFav }: CardFav) {
     <section className="relative">
       <Link href={`/menu/${cardInfo.link}`} className="border-2 mb-2 bg-gray-50 hover:bg-purple-100 hover:border-purple-300 rounded p-6 flex justify-between">
       <section className="text-start">
-        <h3 className="text-lg">
+        <h3 className="text-md">
           {cardInfo.title}
         </h3>
-        <p className="text-gray-500">
+        <p className="text-sm md:text-base text-gray-500">
           {cardInfo.desc}
         </p>
       </section>
       </Link>
       {cardInfo.fav ?
         <button onClick={() => handleFav(cardInfo.id, false)} className="absolute z-10 top-2 right-2">
-          <StarIcon className="mx-auto fill-purple-600 text-black opacity-50 md:hover:opacity-100 w-[36px] md:w-[26px]" width={26} />
+          <StarIcon className="mx-auto fill-purple-600 text-black opacity-50 md:hover:opacity-100 w-[28px] md:w-[26px]" width={26} />
         </button>
         :
         <button onClick={() => handleFav(cardInfo.id, true)} className="absolute z-10 top-2 right-2">
-          <StarIcon className="mx-auto text-gray-300 md:hover:text-purple-600 w-[36px] md:w-[26px]" width={26} />
+          <StarIcon className="mx-auto text-gray-300 md:hover:text-purple-600 w-[28px] md:w-[26px]" width={26} />
         </button>
       }
     </section>
