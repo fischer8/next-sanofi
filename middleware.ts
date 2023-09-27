@@ -11,6 +11,7 @@ export async function middleware(request: NextRequest) {
     if (!hasVerifiedToken) {
       const response = NextResponse.next();
       response.cookies.delete("token");
+      response.cookies.delete("data");
       return response;
     }
     const response = NextResponse.redirect(new URL("/menu", url));
@@ -23,6 +24,7 @@ export async function middleware(request: NextRequest) {
 
     const response = NextResponse.redirect(new URL("/", url));
     response.cookies.delete("token");
+    response.cookies.delete("data");
 
     return response;
   }
