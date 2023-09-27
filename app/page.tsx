@@ -31,6 +31,7 @@ export default function Terms() {
 
     if (success) {
       router.push("/menu");
+      router.refresh();
     } else {
       setLoading(false);
       alert("CRM ou UF inválidos");
