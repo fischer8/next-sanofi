@@ -61,9 +61,9 @@ export default function Nav({ pageName }: { pageName: string }) {
           <Link className="text-blue-600 underline font-bold" href="/menu">
             Menu
           </Link>
-          <section className="ms-2 cursor-pointer" >
+          <Link href="/menu" className="ms-2" >
             {`> ${pageName}`}
-          </section>
+          </Link>
         </section>
       }
       <Footer />
