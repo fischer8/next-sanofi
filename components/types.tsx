@@ -37,7 +37,6 @@ export type CardFav = {
 
 export type Info = {
   id: number,
-  img: string,
   link: string,
   title: string,
   desc: string,
