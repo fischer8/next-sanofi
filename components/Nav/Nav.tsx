@@ -7,20 +7,23 @@ import cardInfo from '../Menu/info';
 import Footer from '../Footer/Footer';
 import Link from 'next/link';
 import Cookies from 'js-cookie';
-import { AuthInfo, Info } from '../types';
+import { Info } from '../types';
 
 export default function Nav({ pageName }: { pageName: string }) {
   const [showNav, setShowNav] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
   const [favorites, setFavorites] = useState<Info[] | false>(false)
-  const [data, setData] = useState<{ crm: number, name:string }>({ crm: 0, name: "NOME NÃO ENCONTRADO"});
-  console.log('passou aqui')
+  const [data, setData] = useState<{ crm: number, name: string }>({ crm: 0, name: "NOME NÃO ENCONTRADO" });
 
   useEffect(() => {
     const hasCards = localStorage.getItem('cards');
     const localCards = hasCards ? JSON.parse(hasCards)! : false;
-    const navFavorites = localCards ? localCards.filter(({ fav }: Info) => fav) : false;
-    setFavorites(navFavorites);
+    if (localCards) {
+      const navFavorites = localCards.filter(({ fav }: Info) => fav);
+      setFavorites(navFavorites);
+    } else {
+      setFavorites(false);
+    }
     const hasData = Cookies.get('data');
     const data = hasData && JSON.parse(hasData);
     setData(data);
@@ -62,7 +65,7 @@ export default function Nav({ pageName }: { pageName: string }) {
                 {`CRM: ${data.crm}`}
               </h3>
             </section>
-            {favorites && favorites.map((inf: Info) => <Link className="p-5 select-none text-start w-full transition-colors bg-purple-400 mb-[1px] hover:bg-purple-300" key={inf.id} href={`/menu/${inf.link}`}>{inf.title}</Link>)}
+            {favorites && favorites.map((inf: Info) => <Link className="p-5 select-none text-start w-full transition-colors bg-purple-300 mb-[1px] hover:bg-purple-300" key={inf.id} href={`/menu/${inf.link}`}>{inf.title}</Link>)}
             {cardInfo.map((inf) => <Link className="p-5 select-none text-start w-full transition-colors bg-purple-400 mb-[1px] hover:bg-purple-300" key={inf.id} href={`/menu/${inf.link}`}>{inf.title}</Link>)}
           </nav>
         }
