@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import InfoButton from '@/components/InfoButton/InfoButton';
 import InfoModal from '@/components/InfoButton/InfoModal';
@@ -7,13 +7,24 @@ import cardInfo from '../Menu/info';
 import Footer from '../Footer/Footer';
 import Link from 'next/link';
 import Cookies from 'js-cookie';
+import { AuthInfo, Info } from '../types';
 
 export default function Nav({ pageName }: { pageName: string }) {
   const [showNav, setShowNav] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
-  const hasData = Cookies.get('data');
+  const [favorites, setFavorites] = useState<Info[] | false>(false)
+  const [data, setData] = useState<{ crm: number, name:string }>({ crm: 0, name: "NOME NÃO ENCONTRADO"});
+  console.log('passou aqui')
 
-  const data = hasData && JSON.parse(hasData)
+  useEffect(() => {
+    const hasCards = localStorage.getItem('cards');
+    const localCards = hasCards ? JSON.parse(hasCards)! : false;
+    const navFavorites = localCards ? localCards.filter(({ fav }: Info) => fav) : false;
+    setFavorites(navFavorites);
+    const hasData = Cookies.get('data');
+    const data = hasData && JSON.parse(hasData);
+    setData(data);
+  }, [])
 
   return (
     <section>
@@ -51,6 +62,7 @@ export default function Nav({ pageName }: { pageName: string }) {
                 {`CRM: ${data.crm}`}
               </h3>
             </section>
+            {favorites && favorites.map((inf: Info) => <Link className="p-5 select-none text-start w-full transition-colors bg-purple-400 mb-[1px] hover:bg-purple-300" key={inf.id} href={`/menu/${inf.link}`}>{inf.title}</Link>)}
             {cardInfo.map((inf) => <Link className="p-5 select-none text-start w-full transition-colors bg-purple-400 mb-[1px] hover:bg-purple-300" key={inf.id} href={`/menu/${inf.link}`}>{inf.title}</Link>)}
           </nav>
         }

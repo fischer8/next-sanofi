@@ -45,6 +45,7 @@ export type Info = {
 }
 
 export type AuthInfo = {
+  name?: string;
   crm: number;
   uf: string;
 }
