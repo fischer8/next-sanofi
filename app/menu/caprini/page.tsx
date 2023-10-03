@@ -58,7 +58,7 @@ export default function Avaliacao() {
               Essa ferramenta ajuda os profissionais de saúde a identificar pacientes com maior risco de TVP e tomar medidas preventivas adequadas.
             </p>
           </section>
-          <form onSubmit={handleSubmit} className="flex flex-col md:relative justify-center md:justify-evenly bg-white md:border md:border-gray-300 rounded-lg md:shadow-lg p-4 w-full md:w-[400px] md:h-fit items-center">
+          <form onSubmit={handleSubmit} className="flex flex-col md:relative justify-center md:justify-evenly bg-white md:border rounded-lg md:shadow-lg p-4 w-full md:w-[400px] md:h-fit items-center">
           <Back />
             <legend className="mb-4 md:hidden font-bold">
               Escore de Caprini
