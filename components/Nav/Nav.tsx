@@ -17,7 +17,7 @@ export default function Nav({ pageName }: { pageName: string }) {
 
   useEffect(() => {
     const hasCards = localStorage.getItem('cards');
-    const localCards = hasCards ? JSON.parse(hasCards)! : false;
+    const localCards = hasCards && JSON.parse(hasCards);
     if (localCards) {
       const navFavorites = localCards.filter(({ fav }: Info) => fav);
       setFavorites(navFavorites);
