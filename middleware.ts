@@ -21,14 +21,11 @@ export async function middleware(request: NextRequest) {
   if (!hasVerifiedToken) {
     const searchParams = new URLSearchParams(nextUrl.searchParams);
     searchParams.set("next", nextUrl.pathname);
-
     const response = NextResponse.redirect(new URL("/", url));
     response.cookies.delete("token");
     response.cookies.delete("data");
-
     return response;
   }
-
   return NextResponse.next();
 }
 
