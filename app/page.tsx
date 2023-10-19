@@ -26,6 +26,7 @@ export default function Terms() {
       method: "POST",
       body: JSON.stringify({ crm: info.crm, uf: info.uf }),
     });
+
     const { success } = await res.json();
     if (success) {
       router.push("/menu");
