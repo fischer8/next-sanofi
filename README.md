@@ -1,6 +1,7 @@
 # WebTEV
 
-Aplicação Web com validador de crm e geração de tokens que disponibiliza calculadoras e ferramentas médicas para o tratamento da Trombose Entravenosa Profunda
+Aplicação Web com validador de crm e geração de tokens que disponibiliza calculadoras e ferramentas médicas para o tratamento da Trombose Entravenosa Profunda.
+
 
 # Tecnologias utilizadas
 
