@@ -23,7 +23,6 @@ export default function pdfPadua(risk: { id: number, risk: string }, score: numb
 
   var doc = new jsPDF();
   const dateTime = new Date().toLocaleString('pt-BR', { hour12: false }).split(', ');
-  doc.addImage('/sanofi-sm-lg.png', 176, 7, 20, 6);
   doc.setFontSize(14);
   doc.text(dateTime[0], 14, 12);
   doc.line(0, 22, 225, 22);
