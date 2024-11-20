@@ -6,13 +6,6 @@ export default function InfoModal({ handleShow }: ShowInfo) {
   return (
     <section className="absolute z-50 top-0 bottom-0 w-full md:bg-opacity-90 flex items-center align-middle md:bg-black">
       <section className="absolute top-0 bottom-0 md:static md:py-16 md:w-[500px] md:border rounded-2xl md:mx-auto bg-white flex flex-col items-center justify-center">
-        <Image
-          alt='logo sanofi'
-          src='/sanofi-logo.png'
-          width={200}
-          height={300}
-          className='mx-auto'
-        />
         <h2 className="font-bold text-4x1 md:text-xl mb-2">
           WebTEV
         </h2>
