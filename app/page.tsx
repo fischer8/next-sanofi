@@ -40,13 +40,6 @@ export default function Terms() {
   return (
     <main className="md:min-h-screen text-center text-black md:bg-white md:flex md:items-center md:justify-center">
       <section className="bg-white absolute top-0 bottom-0 md:static md:border md:rounded-lg md:shadow-lg flex flex-col justify-center py-12 px-6 md:px-2 w-full md:w-1/2">
-        <Image
-          alt='logo sanofi'
-          src='/sanofi-logo.png'
-          width={200}
-          height={300}
-          className='mx-auto'
-        />
         <h1 className="text-2xl font-bold mb-4">
           WebTEV
         </h1>
